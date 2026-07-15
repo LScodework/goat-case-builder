@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>GOAT Case Builder</title>
+    </head>
+    <body>
+        <header>
+            <h1>GOAT Case Builder</h1>
+            <p>Build and compare cases for basketball's greatest players.</p>
+        </header>
+        <main class="comparison-container">
+            <!-- Holds both player panels side by side. -->
+        
+            <section class="player-panel">
+                <!-- Left-side player comparison panel. -->
+        
+                <h2>Player One</h2>
+        
+                <label for="player-one-select">Select a Player:</label>
+        
+                <select id="player-one-select">
+                    <option value="">Select a Player</option>
+                    <option value="lebronjames">LeBron James</option>
+                    <option value="michaeljordan">Michael Jordan</option>
+                    <option value="kobebryant">Kobe Bryant</option>
+                    <option value="magicjohnson">Magic Johnson</option>
+                    <option value="larrybird">Larry Bird</option>
+                    <option value="stephencurry">Stephen Curry</option>
+                    <option value="kevindurant">Kevin Durant</option>
+                    <option value="wiltchamberlain">Wilt Chamberlain</option>
+                    <option value="kareemabduljabbar">Kareem Abdul-Jabbar</option>
+                </select>
+                <div class="player-result" hidden>
+                    <!-- Holds all information for the selected player. -->
+                
+                    <div class="player-overview">
+                        <!-- Places the action photo beside the four summary lines. -->
+                
+                        <div class="player-photo-placeholder">
+                            Action Photo
+                        </div>
+                
+                        <div class="player-summary">
+                            <h3>Player Name</h3>
+                
+                            <p>Position(s), Height, Weight</p>
+                
+                            <p>Teams, Era</p>
+                
+                            <p>MVPs, Championships, Finals MVPs</p>
+                        </div>
+                    </div>
+                
+                    <section class="career-resume">
+                        <h3>Career Résumé</h3>
+                        <ul class="career-accomplishments"></ul>
+                    </section>
+                    
+                    <section class="goat-case">
+                        <h3>GOAT Case Arguments</h3>
+                        <ul class="goat-arguments"></ul>
+                    </section>
+                </div>
+            </section>
+        
+            <section class="player-panel">
+                <!-- Right-side player comparison panel. -->
+        
+                <h2>Player Two</h2>
+        
+                <label for="player-two-select">Select a Player:</label>
+        
+                <select id="player-two-select">
+                    <option value="">Select a Player</option>
+                    <option value="lebronjames">LeBron James</option>
+                    <option value="michaeljordan">Michael Jordan</option>
+                    <option value="kobebryant">Kobe Bryant</option>
+                    <option value="magicjohnson">Magic Johnson</option>
+                    <option value="larrybird">Larry Bird</option>
+                    <option value="stephencurry">Stephen Curry</option>
+                    <option value="kevindurant">Kevin Durant</option>
+                    <option value="wiltchamberlain">Wilt Chamberlain</option>
+                    <option value="kareemabduljabbar">Kareem Abdul-Jabbar</option>
+                </select>
+                <div class="player-result" hidden>
+                    <!-- Holds all information for the selected player. -->
+                
+                    <div class="player-overview">
+                        <!-- Places the action photo beside the four summary lines. -->
+                
+                        <div class="player-photo-placeholder">
+                            Action Photo
+                        </div>
+                
+                        <div class="player-summary">
+                            <h3>Player Name</h3>
+                
+                            <p>Position(s), Height, Weight</p>
+                
+                            <p>Teams, Era</p>
+                
+                            <p>MVPs, Championships, Finals MVPs</p>
+                        </div>
+                    </div>
+                
+                    <section class="career-resume">
+                        <h3>Career Résumé</h3>
+                        <ul class="career-accomplishments"></ul>
+                    </section>
+                    
+                    <section class="goat-case">
+                        <h3>GOAT Case Arguments</h3>
+                        <ul class="goat-arguments"></ul>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
