@@ -376,11 +376,28 @@ function setUpPlayerSelector(selectID){
             playerResult.hidden = false;
 
         }
+        updateAvailablePlayers();
     });
 }
+function updateAvailablePlayers() {
+    const playerOneSelect = document.getElementById("player-one-select");
+    const playerTwoSelect = document.getElementById("player-two-select");
 
+    const playerOneValue = playerOneSelect.value;
+    const playerTwoValue = playerTwoSelect.value;
+
+    for (const option of playerOneSelect.options) {
+        option.disabled = option.value === playerTwoValue && option.value !== "";
+    }
+    
+    for (const option of playerTwoSelect.options) {
+        option.disabled = option.value === playerOneValue && option.value !== "";
+    }
+}
 setUpPlayerSelector("player-one-select");
 setUpPlayerSelector("player-two-select");
+
+
 
 
 
