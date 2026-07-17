@@ -75,3 +75,11 @@ header{
     padding-top: 16px;
     border-top: 1px solid #dddddd;
 }
+.player-photo {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    flex-shrink: 0;
+}

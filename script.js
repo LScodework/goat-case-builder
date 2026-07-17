@@ -3,6 +3,7 @@ const players = {
 
     lebronjames: {
         name: "LeBron Raymone James",
+        image: "images/lebron-james.jpg",
         physical: "6'9\" 250lbs | SF PF PG SG",
         career: "Cavaliers (#23, #6), Heat (#6), Lakers (#23, #6) | 2003 - Present",
         awards: "4 MVPs | 4 NBA Championships | 4 Finals MVPs",
@@ -34,6 +35,7 @@ const players = {
     },
     michaeljordan: {
         name: "Michael Jeffrey Jordan",
+        image: "images/michael-jordan.jpg",
         physical: "6'6\" 216 lbs | SG SF",
         career: "Bulls (#23, #45, #12), Wizards (#23) | 1984–2003",
         awards: "5 MVPs | 6 NBA Championships | 6 Finals MVPs",
@@ -61,6 +63,7 @@ const players = {
     },
     kobebryant: {
         name: "Kobe Bean Bryant",
+        image: "images/kobe-bryant.jpg",
         physical: "6'6\" 212 lbs | SG SF",
         career: "Lakers (#8, #24) | 1996–2016",
         awards: "1 MVP | 5 NBA Championships | 2 Finals MVPs",
@@ -91,6 +94,7 @@ const players = {
     },
     magicjohnson: {
         name: "Earvin “Magic” Johnson Jr.",
+        image: "images/magic-johnson.jpg",
         physical: "6'9\" 215 lbs | PG SG PF",
         career: "Lakers (#32) | 1979–1991, 1996",
         awards: "3 MVPs | 5 NBA Championships | 3 Finals MVPs",
@@ -121,6 +125,7 @@ const players = {
     },
     larrybird: {
         name: "Larry Joe Bird",
+        image: "images/larry-bird.jpg",
         physical: "6'9\" 220 lbs | SF PF",
         career: "Celtics (#33) | 1979–1992",
         awards: "3 MVPs | 3 NBA Championships | 2 Finals MVPs",
@@ -151,6 +156,7 @@ const players = {
     },
     stephencurry: {
         name: "Wardell Stephen Curry II",
+        image: "images/stephen-curry.jpg",
         physical: "6'2\" 185 lbs | PG SG",
         career: "Warriors (#30) | 2009–present",
         awards: "2 MVPs | 4 NBA Championships | 1 Finals MVP",
@@ -183,6 +189,7 @@ const players = {
     },
     kevindurant: {
         name: "Kevin Wayne Durant",
+        image: "images/kevin-durant.jpg",
         physical: "6'10\" 240 lbs | SF PF SG",
         career: "SuperSonics (#35), Thunder (#35), Warriors (#35), Nets (#7), Suns (#35), Rockets (#7) | 2007–present",
         awards: "1 MVP | 2 NBA Championships | 2 Finals MVPs",
@@ -213,6 +220,7 @@ const players = {
     },
     wiltchamberlain: {
         name: "Wilton Norman Chamberlain",
+        image: "images/wilt-chamberlain.jpg",
         physical: "7'1\" 275 lbs | C",
         career: "Philadelphia Warriors (#13), San Francisco Warriors (#13), 76ers (#13), Lakers (#13) | 1959–1973",
         awards: "4 MVPs | 2 NBA Championships | 1 Finals MVP",
@@ -245,6 +253,7 @@ const players = {
     },
     kareemabduljabbar: {
         name: "Kareem Abdul-Jabbar",
+        image: "images/kareem-abdul-jabbar.jpg",
         physical: "7'2\" 225 lbs | C",
         career: "Bucks (#33), Lakers (#33) | 1969–1989",
         awards: "6 MVPs | 6 NBA Championships | 2 Finals MVPs",
@@ -277,6 +286,7 @@ const players = {
     },
     billrussell: {
         name: "William Felton Russell",
+        image: "images/bill-russell.jpg",
         physical: "6'10\" 215 lbs | C",
         career: "Celtics (#6) | 1956–1969",
         awards: "5 MVPs | 11 NBA Championships | 0 Finals MVPs",
@@ -318,6 +328,8 @@ function setUpPlayerSelector(selectID){
     const playerPanel = playerSelect.closest(".player-panel");
 
     const playerResult = playerPanel.querySelector(".player-result");
+
+    const playerPhoto = playerResult.querySelector(".player-photo");
     
     const playerName = playerResult.querySelector(".player-summary h3");
 
@@ -340,6 +352,8 @@ function setUpPlayerSelector(selectID){
                 return;
             }
 
+            playerPhoto.src = selectedPlayer.image;
+            playerPhoto.alt = selectedPlayer.name;
             playerName.textContent = selectedPlayer.name;
             playerDetails[0].textContent = selectedPlayer.physical;
             playerDetails[1].textContent = selectedPlayer.career;
