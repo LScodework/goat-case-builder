@@ -49,3 +49,45 @@
 - JavaScript objects store labeled information, while arrays store multiple ordered items.
 - Functions make code reusable and prevent unnecessary duplication.
 - Git commits create clear checkpoints that document the progress of a project.
+## Day 2 — Expanded the Player Database
+
+Today I expanded the GOAT Case Builder from one working player profile to a complete group of ten players.
+
+### What I completed
+
+* Added full profile data for:
+
+  * Michael Jordan
+  * Kobe Bryant
+  * Magic Johnson
+  * Larry Bird
+  * Stephen Curry
+  * Kevin Durant
+  * Wilt Chamberlain
+  * Kareem Abdul-Jabbar
+  * Bill Russell
+* Kept LeBron James as the original profile from Day 1.
+* Added Bill Russell to both player dropdown menus.
+* Added each player’s:
+
+  * Full name
+  * Positions, height, and weight
+  * Teams, jersey numbers, and career span
+  * MVPs, championships, and Finals MVPs
+  * Career résumé
+  * GOAT case arguments
+* Tested every player in both comparison panels.
+* Confirmed that the same reusable JavaScript system correctly displays different player profiles on either side.
+* Found and fixed a display issue with Kareem Abdul-Jabbar’s profile.
+* Committed the completed Day 2 changes to Git with the message:
+
+  * `Add complete player profiles`
+
+### What I learned
+
+* A JavaScript object can store a large amount of organized data for multiple players.
+* Each player must use a key that exactly matches the value used in the HTML dropdown.
+* Commas are required between player objects inside the larger `players` object.
+* A missing comma, bracket, quote, or mismatched key can prevent a player profile from displaying.
+* Building one reusable display function is much more efficient than creating separate HTML for every player.
+* Testing each new player immediately makes errors easier to find.
