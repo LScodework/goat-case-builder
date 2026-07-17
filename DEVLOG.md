@@ -49,6 +49,7 @@
 - JavaScript objects store labeled information, while arrays store multiple ordered items.
 - Functions make code reusable and prevent unnecessary duplication.
 - Git commits create clear checkpoints that document the progress of a project.
+
 ## Day 2 — Expanded the Player Database
 
 Today I expanded the GOAT Case Builder from one working player profile to a complete group of ten players.
@@ -91,3 +92,61 @@ Today I expanded the GOAT Case Builder from one working player profile to a comp
 * A missing comma, bracket, quote, or mismatched key can prevent a player profile from displaying.
 * Building one reusable display function is much more efficient than creating separate HTML for every player.
 * Testing each new player immediately makes errors easier to find.
+
+## Day 3 — Player Photos, Comparison Rules, and Header Redesign
+
+### What I Completed
+
+- Replaced the photo placeholders with real `<img>` elements.
+- Added an `image` property to all ten player objects in `script.js`.
+- Created an `images` folder and added a photo for every player.
+- Styled all player photos to display at a consistent size using:
+  - Fixed width and height
+  - `object-fit: cover`
+  - `object-position: center top`
+- Confirmed that every player photo updates correctly in both comparison panels.
+
+### Comparison Improvement
+
+- Created an `updateAvailablePlayers()` function.
+- Made each dropdown disable the player currently selected on the opposite side.
+- Prevented users from comparing the same player against himself.
+- Learned that variables created inside a function can only be used inside that function’s scope.
+
+### Visual Redesign
+
+- Changed the page background from light gray to a near-black gradient.
+- Reworked the header around a dark-and-gold theme.
+- Renamed the site title from **GOAT Case Builder** to **Find Your GOAT**.
+- Added custom metallic-gold assets:
+  - Goat graphics on both sides of the title
+  - Basketball graphics outside the goats
+  - A metallic-gold title PNG
+- Used CSS mirroring so one goat image could face inward on both sides.
+- Adjusted image sizes and spacing until the header looked balanced.
+- Centered and recolored the subtitle to match the new theme.
+- Removed unused image drafts before committing the final design.
+
+### Git Checkpoints
+
+Created commits for:
+
+- `Add player photos`
+- `Prevent duplicate player selections`
+- `Redesign site header`
+
+### Main Concepts Practiced
+
+- Connecting JavaScript object data to HTML image elements
+- Local image paths and project asset organization
+- CSS image sizing and cropping
+- `object-fit` and `object-position`
+- JavaScript function scope
+- Looping through `<select>` options
+- Disabling dropdown choices dynamically
+- CSS pseudo-elements
+- Flexbox alignment
+- Absolute positioning
+- Mirroring images with `transform: scaleX(-1)`
+- Using transparent PNG assets
+- Saving clean progress through Git commits
