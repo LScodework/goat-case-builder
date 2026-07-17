@@ -1,12 +1,91 @@
 body{
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #080808, #151515, #242424);
+    color: #111827;
     margin: 0;
+    min-height: 100vh;
 }
 
 header{
+    position: relative;
     text-align: center;
-    padding: 40px 20px;
+    padding: 28px 20px;
+    color: white;
+}
+
+header h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.site-title-image{
+    width: min(500px, 55vw);
+    height: auto;
+    display: block;
+}
+
+header p{
+    margin: 8px 0 0;
+    font-size: 1rem;
+    text-align: center;
+
+    background: linear-gradient(
+        180deg,
+        #fffde7 0%,
+        #f7d96b 50%,
+        #d9b84c 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+header h1::before,
+header h1::after{
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-image: url("images/goat-shiny-gold.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+header h1::before{
+    transform: none;
+}
+
+header h1::after{
+    transform: scaleX(-1);
+}
+
+header::before,
+header::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 62px;
+    height: 62px;
+    background-image: url("images/basketball-shiny-gold.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-75%);
+}
+
+header::before{
+    left: calc(50% - 430px);
+}
+
+header::after{
+    right: calc(50% - 430px);
 }
 
 .comparison-container{
