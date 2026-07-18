@@ -5,7 +5,28 @@ const players = {
         name: "LeBron Raymone James",
         image: "images/lebron-james.jpg",
         physical: "6'9\" 250lbs | SF PF PG SG",
-        career: "Cavaliers (#23, #6), Heat (#6), Lakers (#23, #6) | 2003 - Present",
+        teams: [
+            {
+                name: "Cleveland Cavaliers",
+                abbreviation: "CLE",
+                numbers: "#23 / #6",
+                logo: "images/cavaliers-logo.png"
+            },
+            {
+                name: "Miami Heat",
+                abbreviation: "MIA",
+                numbers: "#6",
+                logo: "images/heat-logo.png"
+            },
+            {
+                name: "Los Angeles Lakers",
+                abbreviation: "LAL",
+                numbers: "#23 / #6",
+                logo: "images/lakers-logo.png"
+            }
+        ],
+        
+        era: "2003–Present",
         awards: "4 MVPs | 4 NBA Championships | 4 Finals MVPs",
         resume: [
             "4× NBA Champion, 4× Finals MVP, and 4× regular-season MVP.",
@@ -37,7 +58,22 @@ const players = {
         name: "Michael Jeffrey Jordan",
         image: "images/michael-jordan.jpg",
         physical: "6'6\" 216 lbs | SG SF",
-        career: "Bulls (#23, #45, #12), Wizards (#23) | 1984–2003",
+        teams: [
+            {
+                name: "Chicago Bulls",
+                abbreviation: "CHI",
+                numbers: "#23 / #45",
+                logo: "images/bulls-logo.png"
+            },
+            {
+                name: "Washington Wizards",
+                abbreviation: "WAS",
+                numbers: "#23",
+                logo: "images/wizards-logo.png"
+            }
+        ],
+        
+        era: "1984–2003",
         awards: "5 MVPs | 6 NBA Championships | 6 Finals MVPs",
         resume: [
             "6× NBA Champion, 6× Finals MVP, and 5× regular-season MVP.",
@@ -65,7 +101,16 @@ const players = {
         name: "Kobe Bean Bryant",
         image: "images/kobe-bryant.jpg",
         physical: "6'6\" 212 lbs | SG SF",
-        career: "Lakers (#8, #24) | 1996–2016",
+        teams: [
+            {
+                name: "Los Angeles Lakers",
+                abbreviation: "LAL",
+                numbers: "#8 / #24",
+                logo: "images/lakers-logo.png"
+            }
+        ],
+        
+        era: "1996–2016",
         awards: "1 MVP | 5 NBA Championships | 2 Finals MVPs",
 
         resume: [
@@ -96,7 +141,16 @@ const players = {
         name: "Earvin “Magic” Johnson Jr.",
         image: "images/magic-johnson.jpg",
         physical: "6'9\" 215 lbs | PG SG PF",
-        career: "Lakers (#32) | 1979–1991, 1996",
+        teams: [
+            {
+                name: "Los Angeles Lakers",
+                abbreviation: "LAL",
+                numbers: "#32",
+                logo: "images/lakers-logo.png"
+            }
+        ],
+        
+        era: "1979–1996",
         awards: "3 MVPs | 5 NBA Championships | 3 Finals MVPs",
 
         resume: [
@@ -127,7 +181,16 @@ const players = {
         name: "Larry Joe Bird",
         image: "images/larry-bird.jpg",
         physical: "6'9\" 220 lbs | SF PF",
-        career: "Celtics (#33) | 1979–1992",
+        teams: [
+            {
+                name: "Boston Celtics",
+                abbreviation: "BOS",
+                numbers: "#33",
+                logo: "images/celtics-logo.png"
+            }
+        ],
+        
+        era: "1979–1992",
         awards: "3 MVPs | 3 NBA Championships | 2 Finals MVPs",
 
         resume: [
@@ -158,7 +221,16 @@ const players = {
         name: "Wardell Stephen Curry II",
         image: "images/stephen-curry.jpg",
         physical: "6'2\" 185 lbs | PG SG",
-        career: "Warriors (#30) | 2009–present",
+        teams: [
+            {
+                name: "Golden State Warriors",
+                abbreviation: "GSW",
+                numbers: "#30",
+                logo: "images/warriors-logo.png"
+            }
+        ],
+        
+        era: "2009–Present",
         awards: "2 MVPs | 4 NBA Championships | 1 Finals MVP",
 
         resume: [
@@ -191,7 +263,46 @@ const players = {
         name: "Kevin Wayne Durant",
         image: "images/kevin-durant.jpg",
         physical: "6'10\" 240 lbs | SF PF SG",
-        career: "SuperSonics (#35), Thunder (#35), Warriors (#35), Nets (#7), Suns (#35), Rockets (#7) | 2007–present",
+        teams: [
+            {
+                name: "Seattle SuperSonics",
+                abbreviation: "SEA",
+                numbers: "#35",
+                logo: "images/supersonics-logo.png"
+            },
+            {
+                name: "Oklahoma City Thunder",
+                abbreviation: "OKC",
+                numbers: "#35",
+                logo: "images/thunder-logo.png"
+            },
+            {
+                name: "Golden State Warriors",
+                abbreviation: "GSW",
+                numbers: "#35",
+                logo: "images/warriors-logo.png"
+            },
+            {
+                name: "Brooklyn Nets",
+                abbreviation: "BKN",
+                numbers: "#7",
+                logo: "images/nets-logo.png"
+            },
+            {
+                name: "Phoenix Suns",
+                abbreviation: "PHX",
+                numbers: "#35",
+                logo: "images/suns-logo.png"
+            },
+            {
+                name: "Houston Rockets",
+                abbreviation: "HOU",
+                numbers: "#7",
+                logo: "images/rockets-logo.png"
+            }
+        ],
+        
+        era: "2007–Present",
         awards: "1 MVP | 2 NBA Championships | 2 Finals MVPs",
 
         resume: [
@@ -222,7 +333,34 @@ const players = {
         name: "Wilton Norman Chamberlain",
         image: "images/wilt-chamberlain.jpg",
         physical: "7'1\" 275 lbs | C",
-        career: "Philadelphia Warriors (#13), San Francisco Warriors (#13), 76ers (#13), Lakers (#13) | 1959–1973",
+        teams: [
+            {
+                name: "Philadelphia Warriors",
+                abbreviation: "PHW",
+                numbers: "#13",
+                logo: "images/philadelphia-warriors-logo.png"
+            },
+            {
+                name: "San Francisco Warriors",
+                abbreviation: "SFW",
+                numbers: "#13",
+                logo: "images/san-francisco-warriors-logo.png"
+            },
+            {
+                name: "Philadelphia 76ers",
+                abbreviation: "PHI",
+                numbers: "#13",
+                logo: "images/76ers-logo.png"
+            },
+            {
+                name: "Los Angeles Lakers",
+                abbreviation: "LAL",
+                numbers: "#13",
+                logo: "images/lakers-logo.png"
+            }
+        ],
+        
+        era: "1959–1973",
         awards: "4 MVPs | 2 NBA Championships | 1 Finals MVP",
 
         resume: [
@@ -255,7 +393,22 @@ const players = {
         name: "Kareem Abdul-Jabbar",
         image: "images/kareem-abdul-jabbar.jpg",
         physical: "7'2\" 225 lbs | C",
-        career: "Bucks (#33), Lakers (#33) | 1969–1989",
+        teams: [
+            {
+                name: "Milwaukee Bucks",
+                abbreviation: "MIL",
+                numbers: "#33",
+                logo: "images/bucks-logo.png"
+            },
+            {
+                name: "Los Angeles Lakers",
+                abbreviation: "LAL",
+                numbers: "#33",
+                logo: "images/lakers-logo.png"
+            }
+        ],
+        
+        era: "1969–1989",
         awards: "6 MVPs | 6 NBA Championships | 2 Finals MVPs",
 
         resume: [
@@ -288,7 +441,16 @@ const players = {
         name: "William Felton Russell",
         image: "images/bill-russell.jpg",
         physical: "6'10\" 215 lbs | C",
-        career: "Celtics (#6) | 1956–1969",
+        teams: [
+            {
+                name: "Boston Celtics",
+                abbreviation: "BOS",
+                numbers: "#6",
+                logo: "images/celtics-logo.png"
+            }
+        ],
+        
+        era: "1956–1969",
         awards: "5 MVPs | 11 NBA Championships | 0 Finals MVPs",
 
         resume: [
@@ -333,7 +495,11 @@ function setUpPlayerSelector(selectID){
 
     const playerName = playerResult.querySelector(".player-summary h3");
 
-    const playerDetails = playerResult.querySelectorAll(".player-summary p");
+    const physicalDetails = playerResult.querySelector(".physical-value");
+
+    const teamsValue = playerResult.querySelector(".teams-value");
+
+    const eraValue = playerResult.querySelector(".era-value");
 
     const awardNumbers = playerResult.querySelectorAll(".award-number");
 
@@ -359,8 +525,41 @@ function setUpPlayerSelector(selectID){
 
             playerName.textContent = selectedPlayer.name;
 
-            playerDetails[0].textContent = selectedPlayer.physical;
-            playerDetails[1].textContent = selectedPlayer.career;
+            physicalDetails.textContent = selectedPlayer.physical;
+
+            teamsValue.innerHTML = "";
+
+            selectedPlayer.teams.forEach((team, index) => {
+                const teamEntry = document.createElement("span");
+                teamEntry.classList.add("team-entry");
+            
+                const teamLogo = document.createElement("img");
+                teamLogo.src = team.logo;
+                teamLogo.alt = `${team.abbreviation} logo`;
+                teamLogo.classList.add("team-logo");
+
+                const teamTooltip = document.createElement("span");
+                teamTooltip.classList.add("team-tooltip");
+                teamTooltip.textContent = team.name; 
+            
+                const teamText = document.createElement("span");
+                teamText.textContent = `${team.abbreviation} ${team.numbers}`;
+            
+                teamEntry.appendChild(teamLogo);
+                teamEntry.appendChild(teamTooltip);
+                teamEntry.appendChild(teamText);
+            
+                teamsValue.appendChild(teamEntry);
+            
+                if (index < selectedPlayer.teams.length - 1) {
+                    const separator = document.createElement("span");
+                    separator.classList.add("team-separator");
+                    separator.textContent = "·";
+                    teamsValue.appendChild(separator);
+                }
+            });
+        
+             eraValue.textContent = selectedPlayer.era;
 
             const awardValues = selectedPlayer.awards.match(/\d+/g);
 
@@ -411,6 +610,54 @@ function updateAvailablePlayers() {
 }
 setUpPlayerSelector("player-one-select");
 setUpPlayerSelector("player-two-select");
+
+const imageModal = document.querySelector("#image-modal");
+const imageModalPhoto = document.querySelector("#image-modal-photo");
+const imageModalName = document.querySelector("#image-modal-name");
+const imageModalClose = document.querySelector("#image-modal-close");
+
+document.querySelectorAll(".player-photo").forEach((playerPhoto) => {
+    playerPhoto.addEventListener("click", () => {
+        imageModalPhoto.src = playerPhoto.src;
+        imageModalPhoto.alt = playerPhoto.alt;
+
+        imageModalName.textContent = playerPhoto.alt;
+
+        imageModal.classList.add("open");
+    });
+});
+
+function closeImageModal() {
+    imageModal.classList.remove("open");
+}
+
+imageModalClose.addEventListener("click", closeImageModal);
+
+imageModal.addEventListener("click", (event) => {
+    if (event.target === imageModal) {
+        closeImageModal();
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeImageModal();
+    }
+});
+
+document.addEventListener("click", (event) => {
+    const clickedTeamEntry = event.target.closest(".team-entry");
+
+    document.querySelectorAll(".team-entry.is-active").forEach((teamEntry) => {
+        if (teamEntry !== clickedTeamEntry) {
+            teamEntry.classList.remove("is-active");
+        }
+    });
+
+    if (clickedTeamEntry) {
+        clickedTeamEntry.classList.toggle("is-active");
+    }
+});
 
 
 

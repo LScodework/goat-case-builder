@@ -350,12 +350,6 @@ header p{
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
 }
 
-.bio-details p + p{
-    margin-top: 8px;
-    padding-top: 8px;
-    border-top: 1px solid rgba(212, 175, 55, 0.22);
-}
-
 .player-summary h3{
     margin-top: 0;
     margin-bottom: 10px;
@@ -396,3 +390,243 @@ header p{
     color: #cfcfcf;
     font-weight: 500;
 }
+
+.career-details {
+    margin-top: 0.75rem;
+}
+
+.bio-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #d4af37;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.teams-value {
+    display: inline;
+}
+
+.bio-details > p {
+    margin: 0;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+.teams-line {
+    display: flex;
+    align-items: center;
+    margin: 0.9rem 0 0;
+    padding: 0 0 0.9rem 14px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+.teams-value {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    line-height: 1;
+}
+
+.teams-label {
+    color: #d4af37;
+    font-weight: 700;
+    margin-right: 0.3rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.team-entry {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.team-logo {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.team-separator {
+    color: rgba(212, 175, 55, 0.75);
+}
+
+.team-tooltip {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%);
+
+    padding: 0.4rem 0.65rem;
+    border: 1px solid rgba(212, 175, 55, 0.65);
+    border-radius: 6px;
+
+    background: #111827;
+    color: #f3f4f6;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+}
+
+.team-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 5px solid transparent;
+    border-top-color: rgba(212, 175, 55, 0.65);
+}
+
+.team-entry:hover .team-tooltip,
+.team-entry.is-active .team-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-2px);
+}
+
+.era-line {
+    margin: 0.9rem 0 0;
+    padding: 0 0 0 14px;
+    border: none;
+}
+
+.era-label {
+    color: #d4af37;
+    font-weight: 700;
+    margin-right: 0.3rem;
+}
+
+.era-value {
+    display: inline;
+    color: #f3f4f6;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.physical-label {
+    color: #d4af37;
+    font-weight: 700;
+    margin-right: 0.3rem;
+}
+
+.physical-value {
+    color: #f3f4f6;
+}
+
+.player-photo {
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+}
+
+.player-photo:hover {
+    transform: scale(1.03);
+    filter: brightness(1.08);
+}
+
+.image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(5px);
+
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.image-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-modal-card {
+    position: relative;
+    width: min(340px, 85vw);
+    padding: 0.75rem;
+
+    border: 2px solid rgba(212, 175, 55, 0.85);
+    border-radius: 14px;
+
+    background: linear-gradient(145deg, #202020, #111111);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.65),
+        0 0 22px rgba(212, 175, 55, 0.2);
+
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+}
+
+.image-modal.open .image-modal-card {
+    transform: scale(1);
+}
+
+.image-modal-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+
+    border-radius: 9px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+.image-modal-name {
+    margin: 0.75rem 0 0.15rem;
+    color: #d4af37;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    z-index: 1;
+
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #d4af37;
+    border-radius: 50%;
+
+    background: #111827;
+    color: #f3f4f6;
+
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+}
+

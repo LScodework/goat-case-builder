@@ -53,8 +53,21 @@
                             <h3>Player Name</h3>
             
                             <div class="bio-details">
-                                <p>Position(s), Height, Weight</p>
-                                <p>Teams, Era</p>
+                                <p class="physical-line">
+                                    <span class="physical-label">BIO:</span>
+                                    <span class="physical-value">Position(s), Height, Weight</span>
+                                </p>
+                                <div class="career-details">
+                                    <p class="teams-line">
+                                        <span class="teams-label">TEAM:</span>
+                                        <span class="teams-value">Teams</span>
+                                    </p>
+                                
+                                    <p class="era-line">
+                                        <span class="era-label">ERA:</span>
+                                        <span class="era-value">Career Years</span>
+                                    </p>
+                                </div>
                             </div>
             
                             <div class="awards-grid">
@@ -121,8 +134,21 @@
                             <h3>Player Name</h3>
                 
                             <div class="bio-details">
-                                <p>Position(s), Height, Weight</p>
-                                <p>Teams, Era</p>
+                                <p class="physical-line">
+                                    <span class="physical-label">BIO:</span>
+                                    <span class="physical-value">Position(s), Height, Weight</span>
+                                </p>
+                                <div class="career-details">
+                                    <p class="teams-line">
+                                        <span class="teams-label">TEAM:</span>
+                                        <span class="teams-value">Teams</span>
+                                    </p>
+                                
+                                    <p class="era-line">
+                                        <span class="era-label">ERA:</span>
+                                        <span class="era-value">Career Years</span>
+                                    </p>
+                                </div>
                             </div>
                 
                             <div class="awards-grid">
@@ -156,6 +182,23 @@
                 </div>
             </section>
         </main>
+        
+        <div class="image-modal" id="image-modal">
+            <div class="image-modal-card">
+                <button class="image-modal-close" id="image-modal-close" type="button">
+                    &times;
+                </button>
+        
+                <img
+                    class="image-modal-photo"
+                    id="image-modal-photo"
+                    src=""
+                    alt=""
+                >
+        
+                <p class="image-modal-name" id="image-modal-name"></p>
+            </div>
+        </div>
 
         <script src="script.js"></script>
     </body>
