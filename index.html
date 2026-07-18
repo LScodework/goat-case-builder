@@ -11,7 +11,7 @@
             <h1>
                 <img
                     class="site-title-image"
-                    src="images/find-your-goat-clean-gold.png"
+                    src="images/find-your-goat-styled-cropped.png"
                     alt="Find Your GOAT"
                 >
             </h1>
@@ -22,13 +22,13 @@
         
             <section class="player-panel">
                 <!-- Left-side player comparison panel. -->
-        
+            
                 <h2>Player One</h2>
-        
-                <label for="player-one-select">Select a Player:</label>
-        
+            
+                <label for="player-one-select">Pick Your GOAT:</label>
+            
                 <select id="player-one-select">
-                    <option value="">Select a Player</option>
+                    <option value="" selected disabled hidden>Select a Player</option>
                     <option value="lebronjames">LeBron James</option>
                     <option value="michaeljordan">Michael Jordan</option>
                     <option value="kobebryant">Kobe Bryant</option>
@@ -40,46 +40,64 @@
                     <option value="kareemabduljabbar">Kareem Abdul-Jabbar</option>
                     <option value="billrussell">Bill Russell</option>
                 </select>
+            
                 <div class="player-result" hidden>
                     <!-- Holds all information for the selected player. -->
-                
+            
                     <div class="player-overview">
                         <!-- Places the action photo beside the four summary lines. -->
-                
+            
                         <img class="player-photo" src="" alt="">
-                
+            
                         <div class="player-summary">
                             <h3>Player Name</h3>
-                
-                            <p>Position(s), Height, Weight</p>
-                
-                            <p>Teams, Era</p>
-                
-                            <p>MVPs, Championships, Finals MVPs</p>
+            
+                            <div class="bio-details">
+                                <p>Position(s), Height, Weight</p>
+                                <p>Teams, Era</p>
+                            </div>
+            
+                            <div class="awards-grid">
+                                <div class="award-card">
+                                    <span class="award-label">MVPs</span>
+                                    <span class="award-number">0</span>
+                                </div>
+                            
+                                <div class="award-card">
+                                    <span class="award-label">Championships</span>
+                                    <span class="award-number">0</span>
+                                </div>
+                            
+                                <div class="award-card">
+                                    <span class="award-label">Finals MVPs</span>
+                                    <span class="award-number">0</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                
+            
                     <section class="career-resume">
                         <h3>Career Résumé</h3>
                         <ul class="career-accomplishments"></ul>
                     </section>
-                    
+            
                     <section class="goat-case">
                         <h3>GOAT Case Arguments</h3>
                         <ul class="goat-arguments"></ul>
                     </section>
                 </div>
             </section>
+                </div>
         
             <section class="player-panel">
                 <!-- Right-side player comparison panel. -->
         
                 <h2>Player Two</h2>
         
-                <label for="player-two-select">Select a Player:</label>
+                <label for="player-two-select">Pick your GOAT:</label>
         
                 <select id="player-two-select">
-                    <option value="">Select a Player</option>
+                    <option value="" selected disabled hidden>Select a Player</option>
                     <option value="lebronjames">LeBron James</option>
                     <option value="michaeljordan">Michael Jordan</option>
                     <option value="kobebryant">Kobe Bryant</option>
@@ -102,11 +120,27 @@
                         <div class="player-summary">
                             <h3>Player Name</h3>
                 
-                            <p>Position(s), Height, Weight</p>
+                            <div class="bio-details">
+                                <p>Position(s), Height, Weight</p>
+                                <p>Teams, Era</p>
+                            </div>
                 
-                            <p>Teams, Era</p>
-                
-                            <p>MVPs, Championships, Finals MVPs</p>
+                            <div class="awards-grid">
+                                <div class="award-card">
+                                    <span class="award-label">MVPs</span>
+                                    <span class="award-number">0</span>
+                                </div>
+                            
+                                <div class="award-card">
+                                    <span class="award-label">Championships</span>
+                                    <span class="award-number">0</span>
+                                </div>
+                            
+                                <div class="award-card">
+                                    <span class="award-label">Finals MVPs</span>
+                                    <span class="award-number">0</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 

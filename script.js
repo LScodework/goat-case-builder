@@ -330,10 +330,12 @@ function setUpPlayerSelector(selectID){
     const playerResult = playerPanel.querySelector(".player-result");
 
     const playerPhoto = playerResult.querySelector(".player-photo");
-    
+
     const playerName = playerResult.querySelector(".player-summary h3");
 
     const playerDetails = playerResult.querySelectorAll(".player-summary p");
+
+    const awardNumbers = playerResult.querySelectorAll(".award-number");
 
     const careerList = playerResult.querySelector(".career-accomplishments");
 
@@ -354,28 +356,41 @@ function setUpPlayerSelector(selectID){
 
             playerPhoto.src = selectedPlayer.image;
             playerPhoto.alt = selectedPlayer.name;
+
             playerName.textContent = selectedPlayer.name;
+
             playerDetails[0].textContent = selectedPlayer.physical;
             playerDetails[1].textContent = selectedPlayer.career;
-            playerDetails[2].textContent = selectedPlayer.awards;
+
+            const awardValues = selectedPlayer.awards.match(/\d+/g);
+
+            if(awardNumbers.length === 3 && awardValues){
+                awardNumbers[0].textContent = awardValues[0];
+                awardNumbers[1].textContent = awardValues[1];
+                awardNumbers[2].textContent = awardValues[2];
+            }
+            else if(playerDetails[2]){
+                playerDetails[2].textContent = selectedPlayer.awards;
+            }
+
             careerList.innerHTML = "";
             goatList.innerHTML = "";
 
-            selectedPlayer.resume.forEach(function (accomplishment) {
+            selectedPlayer.resume.forEach(function(accomplishment){
                 const listItem = document.createElement("li");
                 listItem.textContent = accomplishment;
                 careerList.appendChild(listItem);
             });
 
-            selectedPlayer.goatArguments.forEach(function (argument) {
+            selectedPlayer.goatArguments.forEach(function(argument){
                 const listItem = document.createElement("li");
                 listItem.textContent = argument;
                 goatList.appendChild(listItem);
             });
-            
-            playerResult.hidden = false;
 
+            playerResult.hidden = false;
         }
+
         updateAvailablePlayers();
     });
 }

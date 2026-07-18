@@ -150,3 +150,67 @@ Created commits for:
 - Mirroring images with `transform: scaleX(-1)`
 - Using transparent PNG assets
 - Saving clean progress through Git commits
+
+## Day 4.a — Header and Player Panel Styling
+
+### What I worked on
+
+- Replaced the previous title image with a new NBA 2K-inspired “Find Your GOAT” header graphic.
+- Cropped the new header PNG to remove excess empty space around the artwork.
+- Kept the original gold goat and basketball accent images, then moved them from the header into the upper corners of the player selection panels.
+  - Goats sit in the far outside corners.
+  - Basketballs sit in the corners closest to the center.
+- Reduced the size of the accent images so the new title graphic remains the main focus.
+
+### Player selection panel redesign
+
+- Changed the player panels from bright white to a neutral charcoal gradient.
+- Added subtle gold borders and stronger shadows to match the dark-and-gold theme.
+- Styled the `Player One` and `Player Two` headings with:
+  - Teko display font
+  - Gold text
+  - Wide metallic gold underline
+- Changed the dropdown label text from “Select a Player” to “Pick Your GOAT.”
+- Styled the labels in a darker gold with uppercase lettering.
+- Redesigned the dropdowns with:
+  - Dark charcoal backgrounds
+  - Gold borders
+  - Gold selected text
+  - Softer gray dropdown options
+  - Hover and focus effects
+- Hid the disabled “Select a Player” placeholder from the opened dropdown list.
+- Kept duplicate-player prevention working between the two dropdowns.
+
+### Player profile redesign
+
+- Upgraded player photos with a metallic gold-gradient frame.
+- Added layered shadows and a subtle hover lift effect to make the photos feel like collectible sports cards.
+- Converted the awards sentence into three separate stat cards:
+  - MVPs
+  - Championships
+  - Finals MVPs
+- Updated JavaScript so the three award numbers populate correctly from each player’s existing awards string.
+- Added gold award labels, gold underline accents, and large highlighted numbers.
+- Wrapped the player physical and career details inside a styled bio card.
+- Added:
+  - Dark inner gradient
+  - Gold left border
+  - Gold divider line
+  - Brighter, heavier bio text
+- Preserved all existing player data, dropdown behavior, résumé lists, GOAT arguments, and duplicate-selection logic.
+
+### Assets added
+
+- `images/find-your-goat-styled.png`
+- `images/find-your-goat-styled-cropped.png`
+
+### Current stopping point
+
+The top player profile section now includes:
+
+- Player photo
+- Player name
+- Styled physical and career bio
+- Three award stat cards
+
+The next planned improvement is to add small team logos beside the team-history information so the career section has more visual variety and is easier to scan.
