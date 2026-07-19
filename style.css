@@ -213,7 +213,7 @@ header p{
 .career-resume,
 .goat-case{
     padding-top: 16px;
-    border-top: 1px solid #dddddd;
+    border-top: 2px solid rgba(212, 175, 55, 0.55);
 }
 
 .player-photo{
@@ -665,6 +665,7 @@ header p{
 
 .flip-card .award-card-back {
     transform: rotateY(180deg);
+    padding: 5px 6px;
 }
 
 .flip-card:hover .award-card-inner,
@@ -678,5 +679,103 @@ header p{
 
 .flip-card .award-label::after {
     width: 55%;
+}
+
+.award-years-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    width: 100%;
+    padding: 0 4px;
+}
+
+.award-year {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3px 1px;
+
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    border-radius: 4px;
+
+    background: rgba(255, 215, 0, 0.08);
+    color: white;
+
+    font-size: 0.62rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.flip-card[data-award="championships"] .award-years-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    padding: 0 4px;
+}
+
+.championship-run {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    padding: 3px 2px;
+
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    border-radius: 4px;
+
+    background: rgba(255, 215, 0, 0.08);
+    color: white;
+
+    font-size: 0.62rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.championship-run {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+    min-width: 0;
+    padding: 3px 2px;
+
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    border-radius: 4px;
+
+    background: rgba(255, 215, 0, 0.08);
+    color: white;
+
+    font-size: 0.62rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.championship-team {
+    color: #f7d44a;
+}
+
+.flip-card[data-award="finalsMvp"] .award-year:only-child {
+    grid-column: 1 / -1;
+    padding: 4px 6px;
+    font-size: 0.58rem;
+    line-height: 1.15;
+    text-align: center;
+    white-space: normal;
+}
+
+.award-note {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 2px 4px;
+
+    color: #d1d5db;
+    font-size: 0.55rem;
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: center;
 }
 

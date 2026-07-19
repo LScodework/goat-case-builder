@@ -28,6 +28,46 @@ const players = {
         
         era: "2003–Present",
         awards: "4 MVPs | 4 NBA Championships | 4 Finals MVPs",
+
+        awardDetails: {
+            mvp: [
+                "2009",
+                "2010",
+                "2012",
+                "2013"
+            ],
+        
+            championships: [
+                {
+                    year: "2012",
+                    team: "MIA",
+                    opponent: "OKC"
+                },
+                {
+                    year: "2013",
+                    team: "MIA",
+                    opponent: "SAS"
+                },
+                {
+                    year: "2016",
+                    team: "CLE",
+                    opponent: "GSW"
+                },
+                {
+                    year: "2020",
+                    team: "LAL",
+                    opponent: "MIA"
+                }
+            ],
+        
+            finalsMvp: [
+                "2012",
+                "2013",
+                "2016",
+                "2020"
+            ]
+        },
+
         resume: [
             "4× NBA Champion, 4× Finals MVP, and 4× regular-season MVP.",
     
@@ -75,6 +115,59 @@ const players = {
         
         era: "1984–2003",
         awards: "5 MVPs | 6 NBA Championships | 6 Finals MVPs",
+
+        awardDetails: {
+            mvp: [
+                "1988",
+                "1991",
+                "1992",
+                "1996",
+                "1998"
+            ],
+        
+            championships: [
+                {
+                    year: "1991",
+                    team: "CHI",
+                    opponent: "LAL"
+                },
+                {
+                    year: "1992",
+                    team: "CHI",
+                    opponent: "POR"
+                },
+                {
+                    year: "1993",
+                    team: "CHI",
+                    opponent: "PHX"
+                },
+                {
+                    year: "1996",
+                    team: "CHI",
+                    opponent: "SEA"
+                },
+                {
+                    year: "1997",
+                    team: "CHI",
+                    opponent: "UTA"
+                },
+                {
+                    year: "1998",
+                    team: "CHI",
+                    opponent: "UTA"
+                }
+            ],
+        
+            finalsMvp: [
+                "1991",
+                "1992",
+                "1993",
+                "1996",
+                "1997",
+                "1998"
+            ]
+        },
+
         resume: [
             "6× NBA Champion, 6× Finals MVP, and 5× regular-season MVP.",
 
@@ -112,6 +205,45 @@ const players = {
         
         era: "1996–2016",
         awards: "1 MVP | 5 NBA Championships | 2 Finals MVPs",
+
+        awardDetails: {
+            mvp: [
+                "2008"
+            ],
+        
+            championships: [
+                {
+                    year: "2000",
+                    team: "LAL",
+                    opponent: "IND"
+                },
+                {
+                    year: "2001",
+                    team: "LAL",
+                    opponent: "PHI"
+                },
+                {
+                    year: "2002",
+                    team: "LAL",
+                    opponent: "NJN"
+                },
+                {
+                    year: "2009",
+                    team: "LAL",
+                    opponent: "ORL"
+                },
+                {
+                    year: "2010",
+                    team: "LAL",
+                    opponent: "BOS"
+                }
+            ],
+        
+            finalsMvp: [
+                "2009",
+                "2010"
+            ]
+        },
 
         resume: [
             "5× NBA Champion, 2× Finals MVP, and 1× regular-season MVP.",
@@ -153,6 +285,48 @@ const players = {
         era: "1979–1996",
         awards: "3 MVPs | 5 NBA Championships | 3 Finals MVPs",
 
+        awardDetails: {
+            mvp: [
+                "1987",
+                "1989",
+                "1990"
+            ],
+        
+            championships: [
+                {
+                    year: "1980",
+                    team: "LAL",
+                    opponent: "PHI"
+                },
+                {
+                    year: "1982",
+                    team: "LAL",
+                    opponent: "PHI"
+                },
+                {
+                    year: "1985",
+                    team: "LAL",
+                    opponent: "BOS"
+                },
+                {
+                    year: "1987",
+                    team: "LAL",
+                    opponent: "BOS"
+                },
+                {
+                    year: "1988",
+                    team: "LAL",
+                    opponent: "DET"
+                }
+            ],
+        
+            finalsMvp: [
+                "1980",
+                "1982",
+                "1987"
+            ]
+        },
+
         resume: [
             "5× NBA Champion, 3× Finals MVP, and 3× regular-season MVP.",
 
@@ -193,6 +367,37 @@ const players = {
         era: "1979–1992",
         awards: "3 MVPs | 3 NBA Championships | 2 Finals MVPs",
 
+        awardDetails: {
+            mvp: [
+                "1984",
+                "1985",
+                "1986"
+            ],
+        
+            championships: [
+                {
+                    year: "1981",
+                    team: "BOS",
+                    opponent: "HOU"
+                },
+                {
+                    year: "1984",
+                    team: "BOS",
+                    opponent: "LAL"
+                },
+                {
+                    year: "1986",
+                    team: "BOS",
+                    opponent: "HOU"
+                }
+            ],
+        
+            finalsMvp: [
+                "1984",
+                "1986"
+            ]
+        },
+
         resume: [
             "3× NBA Champion, 2× Finals MVP, and 3× regular-season MVP.",
 
@@ -232,6 +437,40 @@ const players = {
         
         era: "2009–Present",
         awards: "2 MVPs | 4 NBA Championships | 1 Finals MVP",
+
+        awardDetails: {
+            mvp: [
+                "2015",
+                "2016"
+            ],
+        
+            championships: [
+                {
+                    year: "2015",
+                    team: "GSW",
+                    opponent: "CLE"
+                },
+                {
+                    year: "2017",
+                    team: "GSW",
+                    opponent: "CLE"
+                },
+                {
+                    year: "2018",
+                    team: "GSW",
+                    opponent: "CLE"
+                },
+                {
+                    year: "2022",
+                    team: "GSW",
+                    opponent: "BOS"
+                }
+            ],
+        
+            finalsMvp: [
+                "2022"
+            ]
+        },
 
         resume: [
             "4× NBA Champion, 1× Finals MVP, and 2× regular-season MVP.",
@@ -305,6 +544,30 @@ const players = {
         era: "2007–Present",
         awards: "1 MVP | 2 NBA Championships | 2 Finals MVPs",
 
+        awardDetails: {
+            mvp: [
+                "2014"
+            ],
+        
+            championships: [
+                {
+                    year: "2017",
+                    team: "GSW",
+                    opponent: "CLE"
+                },
+                {
+                    year: "2018",
+                    team: "GSW",
+                    opponent: "CLE"
+                }
+            ],
+        
+            finalsMvp: [
+                "2017",
+                "2018"
+            ]
+        },
+
         resume: [
             "2× NBA Champion, 2× Finals MVP, and 1× regular-season MVP.",
 
@@ -363,6 +626,34 @@ const players = {
         era: "1959–1973",
         awards: "4 MVPs | 2 NBA Championships | 1 Finals MVP",
 
+        awardDetails: {
+            mvp: [
+                "1960",
+                "1966",
+                "1967",
+                "1968"
+            ],
+        
+            championships: [
+                {
+                    year: "1967",
+                    team: "PHI",
+                    opponent: "SFW"
+                },
+                {
+                    year: "1972",
+                    team: "LAL",
+                    opponent: "NYK"
+                }
+            ],
+        
+            finalsMvp: [
+                "1972"
+            ],
+            
+            finalsMvpNote: "Award did not exist for his 1967 championship"
+        },
+
         resume: [
             "2× NBA Champion, 1× Finals MVP, and 4× regular-season MVP.",
 
@@ -411,6 +702,55 @@ const players = {
         era: "1969–1989",
         awards: "6 MVPs | 6 NBA Championships | 2 Finals MVPs",
 
+        awardDetails: {
+            mvp: [
+                "1971",
+                "1972",
+                "1974",
+                "1976",
+                "1977",
+                "1980"
+            ],
+        
+            championships: [
+                {
+                    year: "1971",
+                    team: "MIL",
+                    opponent: "BAL"
+                },
+                {
+                    year: "1980",
+                    team: "LAL",
+                    opponent: "PHI"
+                },
+                {
+                    year: "1982",
+                    team: "LAL",
+                    opponent: "PHI"
+                },
+                {
+                    year: "1985",
+                    team: "LAL",
+                    opponent: "BOS"
+                },
+                {
+                    year: "1987",
+                    team: "LAL",
+                    opponent: "BOS"
+                },
+                {
+                    year: "1988",
+                    team: "LAL",
+                    opponent: "DET"
+                }
+            ],
+        
+            finalsMvp: [
+                "1971",
+                "1985"
+            ]
+        },
+
         resume: [
             "6× NBA Champion, 2× Finals MVP, and a record 6× regular-season MVP.",
 
@@ -452,6 +792,78 @@ const players = {
         
         era: "1956–1969",
         awards: "5 MVPs | 11 NBA Championships | 0 Finals MVPs",
+
+        awardDetails: {
+            mvp: [
+                "1958",
+                "1961",
+                "1962",
+                "1963",
+                "1965"
+            ],
+        
+            championships: [
+                {
+                    year: "1957",
+                    team: "BOS",
+                    opponent: "STL"
+                },
+                {
+                    year: "1959",
+                    team: "BOS",
+                    opponent: "MPL"
+                },
+                {
+                    year: "1960",
+                    team: "BOS",
+                    opponent: "STL"
+                },
+                {
+                    year: "1961",
+                    team: "BOS",
+                    opponent: "STL"
+                },
+                {
+                    year: "1962",
+                    team: "BOS",
+                    opponent: "LAL"
+                },
+                {
+                    year: "1963",
+                    team: "BOS",
+                    opponent: "LAL"
+                },
+                {
+                    year: "1964",
+                    team: "BOS",
+                    opponent: "SFW"
+                },
+                {
+                    year: "1965",
+                    team: "BOS",
+                    opponent: "LAL"
+                },
+                {
+                    year: "1966",
+                    team: "BOS",
+                    opponent: "LAL"
+                },
+                {
+                    year: "1968",
+                    team: "BOS",
+                    opponent: "LAL"
+                },
+                {
+                    year: "1969",
+                    team: "BOS",
+                    opponent: "LAL"
+                }
+            ],
+        
+            finalsMvp: [
+                "Award began in 1969, Russell’s final season; renamed in his honor in 2009"
+            ]
+        },
 
         resume: [
             "11× NBA Champion and 5× regular-season MVP.",
@@ -502,6 +914,18 @@ function setUpPlayerSelector(selectID){
     const eraValue = playerResult.querySelector(".era-value");
 
     const awardNumbers = playerResult.querySelectorAll(".award-number");
+
+    const mvpYearsGrid = playerResult.querySelector(
+        '.flip-card[data-award="mvp"] .award-years-grid'
+    );
+
+    const finalsMvpYearsGrid = playerResult.querySelector(
+        '.flip-card[data-award="finalsMvp"] .award-years-grid'
+    );
+
+    const championshipRunsGrid = playerResult.querySelector(
+        '.flip-card[data-award="championships"] .award-years-grid'
+    );
 
     const careerList = playerResult.querySelector(".career-accomplishments");
 
@@ -571,6 +995,59 @@ function setUpPlayerSelector(selectID){
             else if(playerDetails[2]){
                 playerDetails[2].textContent = selectedPlayer.awards;
             }
+
+            mvpYearsGrid.innerHTML = "";
+
+            if (selectedPlayer.awardDetails) {
+            selectedPlayer.awardDetails.mvp.forEach(function(year) {
+            const yearItem = document.createElement("span");
+
+            yearItem.classList.add("award-year");
+            yearItem.textContent = year;
+
+             mvpYearsGrid.appendChild(yearItem);
+             });
+            }
+
+            finalsMvpYearsGrid.innerHTML = "";
+
+            if (selectedPlayer.awardDetails) {
+                selectedPlayer.awardDetails.finalsMvp.forEach(function(year) {
+                    const yearItem = document.createElement("span");
+            
+                    yearItem.classList.add("award-year");
+                    yearItem.textContent = year;
+            
+                    finalsMvpYearsGrid.appendChild(yearItem);
+                });
+            
+                if (selectedPlayer.awardDetails.finalsMvpNote) {
+                    const noteItem = document.createElement("p");
+            
+                    noteItem.classList.add("award-note");
+                    noteItem.textContent = selectedPlayer.awardDetails.finalsMvpNote;
+            
+                    finalsMvpYearsGrid.appendChild(noteItem);
+                }
+            }
+
+            championshipRunsGrid.innerHTML = "";
+
+            if (selectedPlayer.awardDetails) {
+            selectedPlayer.awardDetails.championships.forEach(function(run) {
+            const runItem = document.createElement("div");
+
+        runItem.classList.add("championship-run");
+
+        runItem.innerHTML = `
+        <span class="championship-year">${run.year}</span>
+        <span class="championship-team">${run.team}</span>
+        <span class="championship-opponent">–${run.opponent}</span>
+        `;
+
+        championshipRunsGrid.appendChild(runItem);
+    });
+}
 
             careerList.innerHTML = "";
             goatList.innerHTML = "";

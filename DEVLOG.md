@@ -350,3 +350,39 @@ The next planned improvement is to add small team logos beside the team-history 
 - Dynamically populate the back of each award card using JavaScript.
 - Test the new award data structure with LeBron James before updating the other nine players.
 - Continue testing all new features on both Player One and Player Two before committing them.
+
+## Day 5 — Dynamic Award Details and Top Section Finalization
+
+Today I finished the entire upper section of the player profile cards.
+
+I added structured `awardDetails` data for all 10 players, including regular-season MVP years, championship runs, Finals MVP years, championship teams, and Finals opponents. I connected that data to the backs of the award flip cards so the information now updates dynamically based on the selected player.
+
+I used JavaScript to create the award-year boxes and championship matchup boxes with `forEach()`, `document.createElement()`, `classList.add()`, `appendChild()`, and `innerHTML = ""`. I also used separate `<span>` elements so the championship-winning team could be highlighted in gold while the year and opponent remain white.
+
+I styled MVP and Finals MVP years in a compact four-column gold-box grid and styled championship runs in a two-column layout so longer entries remain readable. I adjusted only the backs of the flip cards so the new information fits without changing the front-card design.
+
+I also added historical Finals MVP context for Wilt Chamberlain and Bill Russell. Wilt’s card shows his 1972 Finals MVP and notes that the award did not exist for his 1967 championship. Russell’s card explains that the award began in his final season and was later named in his honor.
+
+During the process, I fixed JavaScript selector errors caused by class names and `data-award` values not matching the HTML exactly. This reinforced how one incorrect selector can return `null` and stop the rest of the script from running.
+
+I tested the layout with players who have very different award totals, including Michael Jordan, Kareem Abdul-Jabbar, Kobe Bryant, and Bill Russell. I also changed the white divider above the lower profile sections to a thicker gold divider to better match the site’s visual theme.
+
+The full upper player-profile section is now complete, including player photos, bio information, team history, team logos, award totals, flip cards, award years, championship runs, and historical award context.
+
+### Main Concepts Practiced
+
+- Nested objects and arrays
+- Accessing structured player data
+- Looping with `forEach()`
+- Creating and appending HTML elements with JavaScript
+- Using template literals
+- Styling separate pieces of dynamically generated content
+- CSS grid layouts
+- CSS specificity
+- Debugging `null` selector errors
+- Matching JavaScript selectors exactly to HTML
+- Using `Ctrl + F` to search a file and `Ctrl + Shift + F` to search the whole project
+
+### Next Step
+
+Begin redesigning the Career Résumé and GOAT Case sections.
