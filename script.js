@@ -659,6 +659,20 @@ document.addEventListener("click", (event) => {
     }
 });
 
+document.addEventListener("click", (event) => {
+    const clickedAwardCard = event.target.closest(".flip-card");
+
+    document.querySelectorAll(".flip-card.is-flipped").forEach((card) => {
+        if (card !== clickedAwardCard) {
+            card.classList.remove("is-flipped");
+        }
+    });
+
+    if (clickedAwardCard) {
+        clickedAwardCard.classList.toggle("is-flipped");
+    }
+});
+
 
 
 
