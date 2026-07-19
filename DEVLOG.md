@@ -214,3 +214,139 @@ The top player profile section now includes:
 - Three award stat cards
 
 The next planned improvement is to add small team logos beside the team-history information so the career section has more visual variety and is easier to scan.
+
+## Day 4B – Team Logos, Tooltips, Player Image Modal, and Award Flip Cards
+
+### What I Completed
+
+- Reworked the team history section so each player’s teams are stored as structured data instead of one long text string.
+- Added the following information for every team entry:
+  - Full team name
+  - Team abbreviation
+  - Jersey number or numbers
+  - Team logo file
+- Added team logo badges beside each team abbreviation in the player bio.
+- Added custom gold-and-charcoal tooltips that display the team’s full name.
+- Made the team tooltips work with:
+  - Hover on desktop
+  - Click or tap on mobile
+- Added JavaScript so opening one team tooltip closes any other open tooltip.
+- Added JavaScript so clicking or tapping elsewhere closes the active team tooltip.
+- Cleaned up duplicate CSS rules for:
+  - `.team-entry`
+  - `.team-logo`
+  - `.team-separator`
+
+### Player Bio Layout Improvements
+
+- Updated the player bio area to display separate lines for:
+  - BIO
+  - TEAMS
+  - ERA
+- Styled the labels in gold so the information is easier to scan.
+- Added team logos, abbreviations, and jersey numbers to the TEAMS line.
+- Preserved the divider lines and spacing between the player’s bio sections.
+- Adjusted alignment and spacing so the logos and text sit correctly on the same line.
+
+### Player Image Improvements
+
+- Added an interactive modal for player photos.
+- Player photos now enlarge when clicked or tapped.
+- Added the player’s name beneath the enlarged photo.
+- Added multiple ways to close the image modal:
+  - Clicking the close button
+  - Clicking outside the modal card
+  - Pressing the Escape key
+- Added hover effects to the normal player photo:
+  - Slight zoom
+  - Increased brightness
+- Used the photo’s existing `alt` text to provide the player name inside the modal.
+
+### Award Card Improvements
+
+- Rebuilt all six award cards as interactive flip cards:
+  - MVPs for Player One
+  - Championships for Player One
+  - Finals MVPs for Player One
+  - MVPs for Player Two
+  - Championships for Player Two
+  - Finals MVPs for Player Two
+- Preserved the original award-card styling while adding a front and back face.
+- Added a smooth 3D horizontal flip animation.
+- Added placeholder content to the back of each card:
+  - MVP Years
+  - Championship Runs
+  - Finals MVP Years
+- Made the cards flip when hovered over on desktop.
+- Added tap and click support for mobile devices.
+- Added JavaScript so only one award card remains flipped at a time.
+- Added JavaScript so clicking or tapping outside the cards closes the active card.
+- Fixed the MVP divider line so it matches the width of the other award-card dividers.
+- Completed the flip-card feature without changing the placement of the Career Résumé or GOAT Case sections.
+
+### Problems I Solved
+
+- Fixed duplicated CSS that was causing conflicting team-entry styles.
+- Fixed team tooltip positioning and alignment.
+- Fixed player-name display inside the image modal when the original JavaScript selector did not match the HTML.
+- Recovered the project several times using Git after broken HTML nesting affected the player panels.
+- Used `git restore` to return `index.html` and `style.css` to the last working commit.
+- Used Cursor’s **Revert File** command when an unsaved editor copy did not match the restored file on disk.
+- Learned to replace only one small HTML block at a time instead of moving large groups of nested `<div>` elements.
+- Tested the MVP flip card first before converting the Championships and Finals MVP cards.
+- Confirmed each step worked in both player panels before continuing.
+
+### What I Learned
+
+- How objects and arrays can store structured team data more cleanly than one long string.
+- How JavaScript can dynamically create HTML elements with `document.createElement()`.
+- How to append logos, tooltips, text, and separators to the page with JavaScript.
+- How custom tooltips can replace the browser’s basic `title` tooltip.
+- How event delegation works with `event.target.closest()`.
+- How adding and removing a class can control interactive states.
+- How a modal works using:
+  - A hidden overlay
+  - An active or open class
+  - Click events
+  - Keyboard events
+- How nested HTML elements create the front and back faces of a flip card.
+- How CSS properties create a 3D card animation:
+  - `perspective`
+  - `transform-style: preserve-3d`
+  - `rotateY()`
+  - `backface-visibility`
+  - `transition`
+- How the `.is-flipped` class allows the same flip interaction to work with taps instead of only hover.
+- Why correct HTML nesting is extremely important.
+- Why changing or removing a single closing `</div>` can affect large sections of the page.
+- Why making small changes and testing after each one is safer than replacing an entire section at once.
+- Why Git checkpoints are especially important before complicated HTML and CSS changes.
+- The difference between restoring a file from Git and reverting an unsaved editor tab in Cursor.
+
+### Git Progress
+
+- Saved the completed Day 4B work in Git.
+- Created the commit:
+
+    git commit -m "Add interactive flipping award cards"
+
+- Confirmed that the repository returned to a clean working state with:
+
+    git status
+
+- Final Git result:
+
+    On branch main  
+    nothing to commit, working tree clean
+
+### Next Steps
+
+- Change the player award data from simple text totals into structured award objects.
+- Add the specific years each player won an MVP.
+- Add the specific years each player won Finals MVP.
+- Add championship-year information showing:
+  - The player’s team
+  - The Finals opponent
+- Dynamically populate the back of each award card using JavaScript.
+- Test the new award data structure with LeBron James before updating the other nine players.
+- Continue testing all new features on both Player One and Player Two before committing them.
