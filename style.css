@@ -60,6 +60,21 @@ header p{
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
 }
 
+.interaction-hint{
+    margin: 7px 0 0;
+
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.2px;
+
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+
+    color: rgba(255, 255, 255, 0.62);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.75);
+}
+
 .comparison-container{
     display: flex;
     gap: 24px;
@@ -214,6 +229,249 @@ header p{
 .goat-case{
     padding-top: 16px;
     border-top: 2px solid rgba(212, 175, 55, 0.55);
+}
+
+.career-resume h3{
+    margin: 0 0 16px;
+    text-align: center;
+
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #f5d76e;
+}
+
+.career-accomplishments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin: 0 0 20px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.career-accomplishments li{
+    display: flex;
+    gap: 10px;
+
+    padding: 12px 14px 12px 16px;
+
+    color: #eeeeee;
+    line-height: 1.45;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border-left: 4px solid #d4af37;
+    border-radius: 0 8px 8px 0;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.035);
+
+    box-sizing: border-box;
+}
+
+.career-accomplishments li::before{
+    content: "★";
+
+    flex-shrink: 0;
+
+    color: #f5d76e;
+    font-size: 13px;
+    line-height: 1.45;
+
+    text-shadow: 0 0 8px rgba(245, 215, 110, 0.35);
+}
+
+.career-accomplishments li{
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine){
+    .career-accomplishments li:hover{
+        transform: translateX(8px) scale(1.045);
+
+        border-left-width: 6px;
+        border-left-color: #f5d76e;
+
+        color: #ffffff;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(245, 215, 110, 0.18),
+                rgba(255, 255, 255, 0.055)
+            );
+
+        box-shadow:
+            0 14px 28px rgba(0, 0, 0, 0.48),
+            0 0 20px rgba(245, 215, 110, 0.16),
+            inset 0 0 0 1px rgba(245, 215, 110, 0.22);
+    }
+}
+
+.career-accomplishments li:active{
+    transform: scale(0.99);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .career-accomplishments li{
+        transition: none;
+    }
+
+    .career-accomplishments li:hover,
+    .career-accomplishments li:active{
+        transform: none;
+    }
+}
+
+.goat-case h3{
+    margin: 0 0 16px;
+    text-align: center;
+
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #f5d76e;
+}
+
+.goat-arguments{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    counter-reset: goat-argument;
+}
+
+.goat-arguments li{
+    position: relative;
+
+    min-height: 74px;
+    padding: 18px 16px 18px 66px;
+
+    color: #f3f3f3;
+    line-height: 1.5;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(245, 215, 110, 0.09),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 14px rgba(0, 0, 0, 0.24),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+
+    counter-increment: goat-argument;
+}
+
+.goat-arguments li::before{
+    content: counter(goat-argument, decimal-leading-zero);
+
+    position: absolute;
+    top: 50%;
+    left: 16px;
+
+    transform: translateY(-50%);
+
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+
+    color: #f5d76e;
+
+    text-shadow:
+        0 0 10px rgba(245, 215, 110, 0.25);
+}
+
+.goat-arguments li{
+    transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        background 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.goat-arguments li::before{
+    transition:
+        color 0.22s ease,
+        text-shadow 0.22s ease,
+        transform 0.22s ease;
+}
+
+@media (hover: hover) and (pointer: fine){
+    .goat-arguments li:hover{
+        transform: translateY(-5px) scale(1.025);
+
+        border-color: rgba(245, 215, 110, 0.75);
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(245, 215, 110, 0.18),
+                rgba(255, 255, 255, 0.055)
+            );
+
+        box-shadow:
+            0 14px 26px rgba(0, 0, 0, 0.42),
+            0 0 22px rgba(245, 215, 110, 0.16),
+            inset 0 0 0 1px rgba(245, 215, 110, 0.18);
+    }
+
+    .goat-arguments li:hover::before{
+        color: #fff1a8;
+
+        transform:
+            translateY(-50%)
+            scale(1.12);
+
+        text-shadow:
+            0 0 14px rgba(245, 215, 110, 0.55);
+    }
+}
+
+.goat-arguments li:active{
+    transform: scale(0.985);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .goat-arguments li,
+    .goat-arguments li::before{
+        transition: none;
+    }
+
+    .goat-arguments li:hover,
+    .goat-arguments li:active{
+        transform: none;
+    }
+
+    .goat-arguments li:hover::before{
+        transform: translateY(-50%);
+    }
 }
 
 .player-photo{

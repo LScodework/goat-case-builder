@@ -70,17 +70,23 @@ const players = {
 
         resume: [
             "4× NBA Champion, 4× Finals MVP, and 4× regular-season MVP.",
-    
+        
             "NBA’s all-time leading scorer with 43,440 regular-season points through 2025–26.",
-    
+        
+            "Career averages of 26.8 points, 7.5 rebounds, and 7.4 assists per game.",
+        
+            "22× NBA All-Star and 21× All-NBA selection, including 13 First Team selections.",
+        
+            "1× NBA scoring champion and 1× assists leader.",
+        
+            "6× All-Defensive selection, including 5 First Team selections; 0× Defensive Player of the Year.",
+        
             "NBA’s all-time playoff scoring leader with 8,521 postseason points.",
-    
+        
             "Only player in NBA history with at least 40,000 points, 10,000 rebounds, and 10,000 assists.",
-    
+        
             "First player to surpass 50,000 combined regular-season and playoff points.",
-    
-            "Record 22× NBA All-Star and 21× All-NBA selection, including 13 First Team selections.",
-    
+        
             "Won championships and Finals MVPs with three different franchises: Cleveland, Miami, and Los Angeles."
         ],
     
@@ -170,16 +176,24 @@ const players = {
 
         resume: [
             "6× NBA Champion, 6× Finals MVP, and 5× regular-season MVP.",
-
-            "Won a record 10 NBA scoring titles, including seven consecutive scoring championships from 1987 through 1993.",
-
-            "Holds the NBA records for the highest regular-season scoring average at 30.1 PPG and highest playoff scoring average at 33.4 PPG.",
-
-            "Only player to win six Finals MVP awards, earning the honor during both of Chicago’s three-peats.",
-
-            "14× NBA All-Star, 11× All-NBA selection, 9× All-Defensive First Team selection, 1988 Defensive Player of the Year, and 1985 Rookie of the Year.",
-
-            "Led the Bulls to six championships in eight seasons and finished his Finals career with a 6–0 series record."
+        
+            "Scored 32,292 regular-season points, ranking among the NBA’s all-time career scoring leaders.",
+        
+            "Career averages of 30.1 points, 6.2 rebounds, and 5.3 assists per game.",
+        
+            "14× NBA All-Star and 11× All-NBA selection, including 10 First Team selections.",
+        
+            "10× NBA scoring champion and 3× steals leader.",
+        
+            "1× Defensive Player of the Year and 9× All-Defensive First Team selection.",
+        
+            "Highest career scoring average in NBA history at 30.1 points per game.",
+        
+            "Highest career playoff scoring average in NBA history at 33.4 points per game.",
+        
+            "Went 6–0 in the NBA Finals and won Finals MVP in every championship appearance.",
+        
+            "Won a record 10 scoring titles, including seven consecutive from 1987 through 1993."
         ],
 
         goatArguments: [
@@ -247,16 +261,24 @@ const players = {
 
         resume: [
             "5× NBA Champion, 2× Finals MVP, and 1× regular-season MVP.",
-
-            "18× NBA All-Star, 15× All-NBA selection, and 12× All-Defensive selection.",
-
-            "Won two NBA scoring titles and retired with 33,643 career points.",
-
+        
+            "Scored 33,643 regular-season points, ranking fourth in NBA history at the time of his retirement.",
+        
+            "Career averages of 25.0 points, 5.2 rebounds, and 4.7 assists per game.",
+        
+            "18× NBA All-Star and 15× All-NBA selection, including 11 First Team selections.",
+        
+            "2× NBA scoring champion.",
+        
+            "12× All-Defensive selection, including 9 First Team selections; 0× Defensive Player of the Year.",
+        
             "Scored 81 points against Toronto in 2006, the second-highest single-game total in NBA history.",
-
-            "Won three consecutive championships from 2000 through 2002, then led a restructured Lakers team to back-to-back titles in 2009 and 2010.",
-
-            "Shares the NBA record with four All-Star Game MVP awards, an honor now named after him."
+        
+            "Spent his entire 20-season career with the Los Angeles Lakers.",
+        
+            "Won three consecutive championships from 2000 through 2002 and later led back-to-back title runs in 2009 and 2010.",
+        
+            "Retired after scoring 60 points in the final game of his career."
         ],
 
         goatArguments: [
@@ -329,16 +351,24 @@ const players = {
 
         resume: [
             "5× NBA Champion, 3× Finals MVP, and 3× regular-season MVP.",
-
-            "12× NBA All-Star, 10× All-NBA selection, and 9× All-NBA First Team selection.",
-
-            "Led the NBA in assists four times and steals twice.",
-
-            "Retired with 10,141 assists and a career average of 11.2 assists per game, the highest career average in NBA history.",
-
-            "Recorded 138 career triple-doubles, demonstrating his historic all-around production.",
-
-            "As a 20-year-old rookie, started at center in Game 6 of the 1980 Finals and produced 42 points, 15 rebounds, and seven assists to clinch the championship and Finals MVP."
+        
+            "Scored 17,707 regular-season points during his 13-season NBA career.",
+        
+            "Career averages of 19.5 points, 7.2 rebounds, and 11.2 assists per game.",
+        
+            "12× NBA All-Star and 10× All-NBA selection, including 9 First Team selections.",
+        
+            "4× NBA assists leader and 2× steals leader.",
+        
+            "0× Defensive Player of the Year and 0× All-Defensive selection.",
+        
+            "Holds the highest career assists-per-game average in NBA history at 11.2.",
+        
+            "Won Finals MVP as a rookie after starting at center in the championship-clinching game of the 1980 NBA Finals.",
+        
+            "Led the Lakers to nine NBA Finals appearances in 12 seasons before his first retirement.",
+        
+            "Recorded 138 regular-season triple-doubles and helped define the Lakers’ fast-paced Showtime era."
         ],
 
         goatArguments: [
@@ -400,16 +430,24 @@ const players = {
 
         resume: [
             "3× NBA Champion, 2× Finals MVP, and 3× regular-season MVP.",
-
-            "Won three consecutive MVP awards from 1984 through 1986, becoming one of only a few players in league history to accomplish that feat.",
-
-            "12× NBA All-Star, 10× All-NBA selection, and 9× All-NBA First Team selection.",
-
-            "Finished his career averaging 24.3 points, 10.0 rebounds, and 6.3 assists per game.",
-
-            "Led Boston to five NBA Finals appearances and three championships during the 1980s.",
-
-            "Won Rookie of the Year in 1980 and was later inducted into the Basketball Hall of Fame in 1998."
+        
+            "Scored 21,791 regular-season points during his 13-season NBA career.",
+        
+            "Career averages of 24.3 points, 10.0 rebounds, and 6.3 assists per game.",
+        
+            "12× NBA All-Star and 10× All-NBA selection, including 9 First Team selections.",
+        
+            "0× scoring champion, 0× rebounding leader, and 0× assists leader.",
+        
+            "3× All-Defensive Second Team selection; 0× Defensive Player of the Year.",
+        
+            "Won three consecutive regular-season MVP awards from 1984 through 1986.",
+        
+            "Led the Celtics to five NBA Finals appearances and three championships during the 1980s.",
+        
+            "Member of the exclusive 50–40–90 club in two different seasons.",
+        
+            "Won the first three NBA Three-Point Contests from 1986 through 1988."
         ],
 
         goatArguments: [
@@ -474,18 +512,24 @@ const players = {
 
         resume: [
             "4× NBA Champion, 1× Finals MVP, and 2× regular-season MVP.",
-
-            "Became the first unanimous regular-season MVP in NBA history during the 2015–16 season.",
-
-            "NBA’s all-time leader in regular-season three-pointers made.",
-
-            "Set the single-season NBA record with 402 made three-pointers in 2015–16.",
-
-            "12× NBA All-Star, 11× All-NBA selection, and 2× NBA scoring champion.",
-
-            "Led Golden State to six NBA Finals appearances and four championships between 2015 and 2022.",
-
-            "Won the 2022 Western Conference Finals MVP and Finals MVP while leading Golden State to its fourth championship of his career."
+        
+            "Scored more than 26,000 regular-season points and finished the 2025–26 season ranked 20th on the NBA’s all-time scoring list.",
+        
+            "Career averages of 24.8 points, 4.7 rebounds, and 6.3 assists per game through 2025–26.",
+        
+            "12× NBA All-Star and 11× All-NBA selection, including 4 First Team selections.",
+        
+            "2× NBA scoring champion and 1× steals leader.",
+        
+            "0× Defensive Player of the Year and 0× All-Defensive selection.",
+        
+            "NBA’s all-time leader in made three-pointers and the first player to surpass 4,000 career threes.",
+        
+            "Became the first unanimous MVP in NBA history during the 2015–16 season.",
+        
+            "Led the Warriors to an NBA-record 73 regular-season wins in 2015–16.",
+        
+            "Transformed modern basketball through unprecedented shooting range, volume, and efficiency."
         ],
 
         goatArguments: [
@@ -570,15 +614,23 @@ const players = {
 
         resume: [
             "2× NBA Champion, 2× Finals MVP, and 1× regular-season MVP.",
-
-            "Won four NBA scoring titles, including three consecutive titles from 2010 through 2012.",
-
-            "Became one of the most efficient high-volume scorers in league history by combining elite shooting, length, ball handling, and finishing ability.",
-
-            "Won consecutive championships and Finals MVP awards with Golden State in 2017 and 2018, averaging 35.2 points per game during the 2017 Finals.",
-
-            "16× NBA All-Star and one of the five highest-scoring players in NBA regular-season history.",
-
+        
+            "Finished the 2025–26 season ranked fifth on the NBA’s all-time scoring list.",
+        
+            "Career averages of 27.1 points, 7.0 rebounds, and 4.4 assists per game.",
+        
+            "16× NBA All-Star and 12× All-NBA selection, including 6 First Team selections.",
+        
+            "4× NBA scoring champion.",
+        
+            "0× Defensive Player of the Year and 0× All-Defensive selection.",
+        
+            "Passed Wilt Chamberlain, Dirk Nowitzki, and Michael Jordan on the career scoring list during the 2025–26 season.",
+        
+            "Won consecutive championships and Finals MVP awards with Golden State in 2017 and 2018.",
+        
+            "One of the most efficient high-volume scorers in NBA history, combining elite shooting with near seven-foot size.",
+        
             "Won four Olympic gold medals and became the United States’ all-time leading scorer in Olympic basketball."
         ],
 
@@ -656,18 +708,24 @@ const players = {
 
         resume: [
             "2× NBA Champion, 1× Finals MVP, and 4× regular-season MVP.",
-
-            "Scored an NBA-record 100 points in a single game on March 2, 1962.",
-
+        
+            "Scored 31,419 regular-season points, ranking among the NBA’s all-time career scoring leaders.",
+        
+            "Career averages of 30.1 points, 22.9 rebounds, and 4.4 assists per game.",
+        
+            "13× NBA All-Star and 10× All-NBA selection, including 7 First Team selections.",
+        
+            "7× NBA scoring champion, 11× rebounding leader, and 1× assists leader.",
+        
+            "2× All-Defensive First Team selection; Defensive Player of the Year did not exist during his career.",
+        
+            "Scored an NBA-record 100 points in a single game in 1962.",
+        
             "Averaged an NBA-record 50.4 points per game during the 1961–62 season.",
-
-            "Holds the NBA career record with 23,924 rebounds and averaged a record 22.9 rebounds per game for his career.",
-
-            "Won seven scoring titles, 11 rebounding titles, and one assist title, making him the only center to lead the NBA in total assists.",
-
-            "Recorded 118 career games with at least 50 points and 32 games with at least 60 points, both NBA records.",
-
-            "Won MVP and Rookie of the Year in the same season after averaging 37.6 points and 27.0 rebounds per game as a rookie."
+        
+            "Holds the NBA career record with 23,924 rebounds and the career record of 22.9 rebounds per game.",
+        
+            "Recorded the only season in NBA history in which a center led the league in total assists."
         ],
 
         goatArguments: [
@@ -753,18 +811,24 @@ const players = {
 
         resume: [
             "6× NBA Champion, 2× Finals MVP, and a record 6× regular-season MVP.",
-
-            "19× NBA All-Star, 15× All-NBA selection, and 11× All-Defensive selection.",
-
-            "Won Rookie of the Year in 1970 and captured his first championship, MVP, and Finals MVP in only his second NBA season.",
-
-            "Scored 38,387 career points, which stood as the NBA record for nearly four decades.",
-
-            "Won two scoring titles, one rebounding title, and four blocked-shot titles.",
-
-            "Developed the nearly unstoppable skyhook, one of the most effective and recognizable shots in basketball history.",
-
-            "Won championships in three different decades and remained an elite contributor throughout a 20-season career."
+        
+            "Scored 38,387 regular-season points, ranking second on the NBA’s all-time scoring list.",
+        
+            "Career averages of 24.6 points, 11.2 rebounds, and 3.6 assists per game.",
+        
+            "19× NBA All-Star and 15× All-NBA selection, including 10 First Team selections.",
+        
+            "2× NBA scoring champion, 1× rebounding leader, and 4× blocks leader.",
+        
+            "11× All-Defensive selection, including 5 First Team selections; 0× Defensive Player of the Year.",
+        
+            "Holds the NBA record with six regular-season MVP awards.",
+        
+            "Won championships 17 years apart, capturing titles with Milwaukee in 1971 and Los Angeles in 1988.",
+        
+            "Developed the skyhook into one of the most effective and difficult-to-defend shots in basketball history.",
+        
+            "Played a record 20 NBA seasons at the time of his retirement and remained an elite contributor into his forties."
         ],
 
         goatArguments: [
@@ -866,21 +930,25 @@ const players = {
         },
 
         resume: [
-            "11× NBA Champion and 5× regular-season MVP.",
-
-            "Won more NBA championships as a player than anyone in league history.",
-
-            "Led Boston to 11 championships in 13 seasons, including a record eight consecutive titles from 1959 through 1966.",
-
-            "Reached the NBA Finals in 12 of his 13 seasons and compiled a 10–0 record in winner-take-all playoff games.",
-
-            "12× NBA All-Star, 11× All-NBA selection, and 4× NBA rebounding champion.",
-
-            "Finished his career with 21,620 rebounds and a career average of 22.5 rebounds per game, second only to Wilt Chamberlain.",
-
-            "Became the first Black head coach in NBA history and won two championships as Boston’s player-coach.",
-
-            "The NBA Finals MVP trophy was officially named the Bill Russell NBA Finals Most Valuable Player Award in his honor."
+            "11× NBA Champion and 5× regular-season MVP; the Finals MVP award did not exist until his final season.",
+        
+            "Scored 14,522 regular-season points during his 13-season NBA career.",
+        
+            "Career averages of 15.1 points, 22.5 rebounds, and 4.3 assists per game.",
+        
+            "12× NBA All-Star and 11× All-NBA selection, including 3 First Team selections.",
+        
+            "4× NBA rebounding leader.",
+        
+            "1× All-Defensive First Team selection; Defensive Player of the Year did not exist during his career.",
+        
+            "Won an NBA-record 11 championships in 13 seasons.",
+        
+            "Led Boston to eight consecutive championships from 1959 through 1966.",
+        
+            "Captured two championships as a player-coach and became the NBA’s first Black head coach.",
+        
+            "The NBA Finals MVP award was later named the Bill Russell NBA Finals Most Valuable Player Award in his honor."
         ],
 
         goatArguments: [
@@ -1066,8 +1134,9 @@ function setUpPlayerSelector(selectID){
 
             playerResult.hidden = false;
         }
-
+        
         updateAvailablePlayers();
+        syncCareerResumeRows();
     });
 }
 function updateAvailablePlayers() {
@@ -1085,8 +1154,53 @@ function updateAvailablePlayers() {
         option.disabled = option.value === playerOneValue && option.value !== "";
     }
 }
+
+function syncCareerResumeRows(){
+    const careerLists = document.querySelectorAll(
+        ".career-accomplishments"
+    );
+
+    if(careerLists.length !== 2){
+        return;
+    }
+
+    const playerOneRows = careerLists[0].querySelectorAll("li");
+    const playerTwoRows = careerLists[1].querySelectorAll("li");
+
+    const allRows = [...playerOneRows, ...playerTwoRows];
+
+    allRows.forEach(function(row){
+        row.style.height = "";
+    });
+
+    /* Let the rows size naturally on mobile. */
+    if(window.innerWidth <= 768){
+        return;
+    }
+
+    const numberOfRows = Math.min(
+        playerOneRows.length,
+        playerTwoRows.length
+    );
+
+    for(let index = 0; index < numberOfRows; index++){
+        const playerOneHeight = playerOneRows[index].offsetHeight;
+        const playerTwoHeight = playerTwoRows[index].offsetHeight;
+
+        const matchingHeight = Math.max(
+            playerOneHeight,
+            playerTwoHeight
+        );
+
+        playerOneRows[index].style.height = `${matchingHeight}px`;
+        playerTwoRows[index].style.height = `${matchingHeight}px`;
+    }
+}
+
 setUpPlayerSelector("player-one-select");
 setUpPlayerSelector("player-two-select");
+
+window.addEventListener("resize", syncCareerResumeRows);
 
 const imageModal = document.querySelector("#image-modal");
 const imageModalPhoto = document.querySelector("#image-modal-photo");

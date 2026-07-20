@@ -386,3 +386,88 @@ The full upper player-profile section is now complete, including player photos, 
 ### Next Step
 
 Begin redesigning the Career Résumé and GOAT Case sections.
+
+## Day 6 – Career Résumé and GOAT Case Styling
+
+### Career Résumé Redesign
+
+- Redesigned the Career Résumé section so each accomplishment appears as its own polished achievement row.
+- Removed the default list bullets.
+- Added dark gradient backgrounds to each résumé item.
+- Added gold left-side accent borders.
+- Added gold star icons before each accomplishment.
+- Improved spacing between résumé cards and the GOAT Case divider.
+- Added stronger desktop hover effects:
+  - Horizontal movement
+  - Slight scale increase
+  - Brighter background
+  - Stronger shadow and gold glow
+  - Wider gold accent border
+- Added mobile-safe `:active` feedback.
+- Added reduced-motion support for users who disable animations.
+
+### GOAT Case Arguments Redesign
+
+- Redesigned the GOAT Case Arguments section so it feels distinct from the résumé.
+- Turned each argument into a larger numbered card.
+- Added automatic `01`, `02`, `03`, and `04` numbering using CSS counters.
+- Added gold borders, dark gradients, rounded corners, and subtle shadows.
+- Added desktop hover effects:
+  - Upward lift
+  - Slight scale increase
+  - Brighter gold border
+  - Stronger glow
+  - Larger and brighter argument number
+- Added mobile-safe press feedback.
+- Added reduced-motion support.
+
+### Interaction Instructions
+
+- Added a small interaction hint beneath the site description in the header.
+- The hint explains that users can tap or hover over:
+  - Player photos
+  - Team logos
+  - Award cards
+- Styled the hint so it remains subtle and does not inherit the main gold-gradient subtitle styling.
+
+### Standardized Career Résumé Data
+
+- Reorganized all ten player résumés into a consistent comparison structure.
+- Added six standard résumé rows for every player:
+  1. Championships, Finals MVPs, and regular-season MVPs
+  2. Career points and scoring position
+  3. Career points, rebounds, and assists averages
+  4. All-Star and All-NBA selections
+  5. Major statistical titles
+  6. Defensive honors
+- Added four player-specific résumé accomplishments beneath the standard rows.
+- Updated résumé data for:
+  - LeBron James
+  - Michael Jordan
+  - Kobe Bryant
+  - Magic Johnson
+  - Larry Bird
+  - Stephen Curry
+  - Kevin Durant
+  - Wilt Chamberlain
+  - Kareem Abdul-Jabbar
+  - Bill Russell
+
+### Head-to-Head Résumé Alignment
+
+- Added a `syncCareerResumeRows()` JavaScript function.
+- Matching résumé rows on Player One and Player Two now use the same height.
+- The taller row determines the shared height for both players.
+- Added `box-sizing: border-box` to résumé rows so padding and borders are included correctly.
+- The row heights resync whenever:
+  - Either selected player changes
+  - The browser window is resized
+- Forced row heights are removed on mobile so stacked cards return to natural sizing.
+
+### Result
+
+- The lower half of each player card now matches the visual quality of the photo, bio, and awards sections.
+- Career accomplishments are easier to scan.
+- GOAT arguments feel more important and persuasive.
+- Standardized résumé rows make head-to-head comparison much clearer.
+- Matching rows stay aligned across both player cards on desktop while remaining mobile-friendly.
