@@ -201,7 +201,9 @@ const players = {
 
             "Perfect championship conversion: Once Jordan reached the Finals, his Bulls won all six series, and he was named Finals MVP every time.",
 
-            "Historic two-way excellence: He was both the league’s most dominant scorer and an elite defender, becoming one of the rare perimeter players to win MVP and Defensive Player of the Year in the same season."
+            "Historic two-way excellence: He was both the league’s most dominant scorer and an elite defender, becoming one of the rare perimeter players to win MVP and Defensive Player of the Year in the same season.",
+
+            "Unmatched cultural influence: Jordan became basketball’s first truly global superstar, helped transform the NBA into an international phenomenon, and established the standard by which later generations of elite players are measured."
         ]
     },
     kobebryant: {
