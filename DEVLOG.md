@@ -471,3 +471,247 @@ Begin redesigning the Career Résumé and GOAT Case sections.
 - GOAT arguments feel more important and persuasive.
 - Standardized résumé rows make head-to-head comparison much clearer.
 - Matching rows stay aligned across both player cards on desktop while remaining mobile-friendly.
+
+## Day 7 – Final Polish and GitHub Deployment
+
+### What I Worked On
+
+Today I finished several final content and visual improvements, saved the project with Git, uploaded the repository to GitHub, and published the website using GitHub Pages.
+
+### GOAT Case Argument Consistency
+
+- Reviewed the GOAT Case Arguments for all ten players.
+- Confirmed that nine players already had four arguments.
+- Found that Michael Jordan only had three arguments.
+- Added a fourth Michael Jordan argument focused on his cultural influence, the globalization of basketball, and his lasting impact on how future great players are evaluated.
+- Confirmed that all ten players now have four GOAT Case Arguments.
+- This keeps the two player columns visually aligned when comparing their GOAT cases.
+
+### Header Redesign
+
+- Reworked the top of the website so the title area no longer floats in an empty section.
+- Turned the header into a framed hero panel that matches the dark-and-gold visual style of the player comparison cards.
+- Added:
+  - A dark layered gradient background
+  - A subtle gold glow behind the title
+  - A gold border
+  - Rounded corners
+  - An outer shadow
+  - A faint inner highlight
+  - A decorative gold line across the bottom
+- Expanded the header closer to the edges of the screen.
+- Kept the existing title image, subtitle, and interaction instructions unchanged.
+- Avoided adding more decorative images so the header would remain clean instead of becoming cluttered.
+
+### Saving the Final Layout Changes
+
+- Saved all updated project files in Cursor.
+- Used Git to check the working directory.
+- Staged the three modified files.
+- Created a new commit for the completed comparison layout and header work.
+
+Commit created:
+
+```bash
+git commit -m "Polish comparison layout and header"
+```
+
+- Confirmed that the repository returned to a clean state with nothing left to commit.
+
+### Git and GitHub
+
+Before today, the project was using Git locally, but it was not connected to an online repository.
+
+I learned that:
+
+- Git tracks versions of the project locally on the computer.
+- GitHub stores the Git repository online.
+- GitHub acts as an online backup for the code and commit history.
+- A GitHub repository can be shared with other people.
+- GitHub can also be used as part of a professional programming portfolio.
+- A remote connects the local Git repository to its GitHub repository.
+- `origin` is the conventional name for the primary remote repository.
+- The `main` branch on the computer can track the `main` branch on GitHub.
+
+### GitHub Repository Creation
+
+- Created a public GitHub repository named:
+
+```text
+goat-case-builder
+```
+
+- Added the repository description:
+
+```text
+An interactive NBA GOAT comparison website built with HTML, CSS, and JavaScript.
+```
+
+- Left the GitHub README, `.gitignore`, and license options unchecked because the local project already had its own files and Git history.
+- Connected the local project to the new GitHub repository.
+
+Commands used:
+
+```bash
+git remote add origin https://github.com/LScodework/goat-case-builder.git
+git remote -v
+```
+
+- Confirmed that `origin` was configured for both fetching and pushing.
+
+### First GitHub Push
+
+Uploaded the complete project and its existing Git history to GitHub with:
+
+```bash
+git push -u origin main
+```
+
+The push:
+
+- Uploaded 106 Git objects
+- Uploaded the complete project files and images
+- Created the remote `main` branch
+- Connected the local `main` branch to the GitHub `main` branch
+- Set the local branch to track `origin/main`
+
+Because the upstream connection is now configured, future updates can normally be uploaded using:
+
+```bash
+git push
+```
+
+### GitHub Pages Deployment
+
+- Opened the repository settings on GitHub.
+- Selected the GitHub Pages section.
+- Set the publishing source to:
+
+```text
+Deploy from a branch
+```
+
+- Selected:
+
+```text
+Branch: main
+Folder: /(root)
+```
+
+- Saved the GitHub Pages settings.
+- GitHub automatically built and published the website.
+- Confirmed that the website can now be opened and shared without purchasing a custom domain.
+
+Public website:
+
+```text
+https://lscodework.github.io/goat-case-builder/
+```
+
+### Live Website Testing
+
+Tested the deployed version and confirmed that:
+
+- The website loads successfully.
+- The title and header display.
+- The player images load.
+- The player dropdowns work.
+- Duplicate player selection prevention works.
+- Player biographies update correctly.
+- Team logos display.
+- Award cards display correctly.
+- Award cards flip to show years and championship opponents.
+- Career Résumé sections display.
+- GOAT Case Arguments display.
+- The side-by-side comparison layout works.
+
+### Live Header Alignment Issue
+
+While testing the published website on a wide browser window, I noticed that the header frame was narrower than the combined width of the two player panels.
+
+The cause was identified as:
+
+```css
+max-width: 1700px;
+```
+
+The player comparison section continued expanding on the larger screen, while the header stopped expanding once it reached 1700 pixels.
+
+The planned correction is to change:
+
+```css
+max-width: 1700px;
+```
+
+to:
+
+```css
+max-width: none;
+```
+
+This will allow the header to remain approximately 10 pixels from each side of the screen and align more closely with the outside edges of the Player One and Player Two panels.
+
+### Important Commands Learned
+
+```bash
+git status
+```
+
+Shows which files have been modified, staged, or left untracked.
+
+```bash
+git add .
+```
+
+Stages all current project changes for the next commit.
+
+```bash
+git commit -m "Commit message"
+```
+
+Creates a saved Git version containing the staged changes.
+
+```bash
+git remote add origin REPOSITORY-URL
+```
+
+Connects a local Git repository to a GitHub repository.
+
+```bash
+git remote -v
+```
+
+Displays the GitHub addresses associated with the remote.
+
+```bash
+git push -u origin main
+```
+
+Uploads the local `main` branch to GitHub and establishes its upstream tracking branch.
+
+```bash
+git push
+```
+
+Uploads future local commits after the upstream connection has been configured.
+
+### Current Project Status
+
+The GOAT Case Builder is now:
+
+- Fully functional
+- Visually polished for desktop
+- Stored locally with Git version history
+- Backed up publicly on GitHub
+- Published as a functioning website through GitHub Pages
+- Shareable with friends using a free public link
+- Suitable to begin presenting as a portfolio project
+
+### Next Steps
+
+- Remove the header’s `max-width: 1700px` restriction.
+- Save the final header alignment change.
+- Commit the adjustment with Git.
+- Push the new commit to GitHub.
+- Confirm that GitHub Pages automatically updates.
+- Test the website more thoroughly on mobile and smaller screen sizes.
