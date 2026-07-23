@@ -715,3 +715,223 @@ The GOAT Case Builder is now:
 - Push the new commit to GitHub.
 - Confirm that GitHub Pages automatically updates.
 - Test the website more thoroughly on mobile and smaller screen sizes.
+
+# Day 8 – Turning the Site Into a True Comparison Tool
+
+## Overview
+
+Today’s focus was improving the GOAT Case Builder so it feels like an actual head-to-head comparison tool instead of two separate player résumés displayed beside each other.
+
+The largest additions were visual comparison markers, standardized résumé comparisons, an overall comparison summary modal, clearer instructions for users, and a few loading-performance improvements.
+
+## Dropdown Improvements
+
+- Reordered both player dropdown menus alphabetically by last name.
+- Final dropdown order:
+  - Kareem Abdul-Jabbar
+  - Larry Bird
+  - Kobe Bryant
+  - Wilt Chamberlain
+  - Stephen Curry
+  - Kevin Durant
+  - LeBron James
+  - Magic Johnson
+  - Michael Jordan
+  - Bill Russell
+- Kept the existing feature that prevents the same player from being selected in both dropdowns.
+
+## Award Card Interaction Improvements
+
+- Updated the MVP, Championship, and Finals MVP flip cards so each card can be locked independently.
+- Cards still flip temporarily when hovered over.
+- Clicking a card now locks it in the flipped position.
+- Clicking the card again returns it to the front.
+- Added an `ignore-hover` state so a card does not immediately flip back after being manually closed.
+- Added matching border-radius and overflow rules so the front and back faces stay contained within the award card.
+
+## Comparison Marker Images
+
+Added two custom transparent comparison images:
+
+- `images/glowing-green-goat.png`
+- `images/glowing-red-basketball.png`
+
+The comparison system now uses:
+
+- Green glowing goat for the category leader
+- Red glowing basketball for the lower result
+- Gold glowing equals sign for a tie
+
+The transparent versions fixed the visible background boxes that appeared around the original images.
+
+## Award Comparisons
+
+Added automatic comparisons for the three main award categories:
+
+- Regular-season MVPs
+- NBA Championships
+- Finals MVPs
+
+When two players are selected, JavaScript compares the totals and places the correct marker on the front of each award card.
+
+The markers only appear on the front of the cards so they do not interfere with the detailed information on the back.
+
+## Standardized Career Résumé Comparisons
+
+The first six rows of every player’s Career Résumé are now treated as standardized comparison categories.
+
+These rows compare:
+
+1. Major awards
+2. Career regular-season points
+3. Career scoring, rebounding, and assist averages
+4. All-Star, All-NBA, and All-NBA First Team selections
+5. League-leading statistical titles
+6. Defensive achievements
+
+The remaining four résumé rows are still unique to each player and display a decorative gold star instead of a comparison marker.
+
+## Comparison Logic
+
+Created reusable JavaScript functions to compare different types of résumé data.
+
+Comparison methods now include:
+
+- Direct numerical comparisons
+- Category-by-category comparisons
+- Counting category wins instead of adding unrelated statistics together
+- Parsing numbers from résumé text
+- Counting MVP, championship, and Finals MVP category victories
+- Comparing career points
+- Comparing points, rebounds, and assists
+- Comparing All-Star and All-NBA selections
+- Comparing statistical league-leading titles
+- Comparing defensive selections and Defensive Player of the Year awards
+
+This allowed the site to compare the standardized résumé rows while keeping the unique player accomplishments unchanged.
+
+## Comparison Summary Button
+
+Added a centered comparison summary button beneath the two player panels.
+
+The button:
+
+- Remains hidden when fewer than two players are selected
+- Appears automatically once both players are selected
+- Remains visible when either selected player is changed
+- Opens a modal containing the overall comparison results
+
+## Comparison Summary Modal
+
+Created a new comparison summary modal that overlays the page.
+
+The modal includes:
+
+- Both selected players
+- Player photos
+- Player names
+- A two-column head-to-head layout
+- Gold divider lines
+- Totals for:
+  - Green goat results
+  - Red basketball results
+  - Tied categories
+
+The modal counts the comparison markers from:
+
+- Three award cards
+- Six standardized résumé rows
+
+This produces nine total comparison categories for each player.
+
+The modal can be closed by:
+
+- Clicking the close button
+- Clicking outside the modal card
+
+## Summary Name Formatting
+
+Adjusted player names inside the comparison summary only.
+
+- Middle names and nicknames are removed from the summary display.
+- The player’s first name appears above the last name.
+- The full stored player name remains unchanged everywhere else on the site.
+
+Example:
+
+Michael  
+Jordan
+
+## Comparison Key
+
+Added a visual key beneath the instructional text in the header.
+
+The key explains:
+
+- Green goat = Category leader
+- Red basketball = Lower total
+- Gold equals sign = Tie
+
+The key was styled to:
+
+- Use smaller text
+- Match the muted off-white instructional text
+- Use smaller icons
+- Keep the same gold equals styling used throughout the player comparisons
+- Sit closely beneath the existing hover/tap instructions
+
+## Comparison Qualifier
+
+Added a clarification beneath the comparison key:
+
+“Comparison results reflect standardized categories only and do not include each player’s unique accolades or GOAT case arguments.”
+
+This makes it clear that the comparison summary does not attempt to mathematically judge the personalized résumé achievements or subjective GOAT arguments.
+
+## Loading and Performance Improvements
+
+Made two small improvements intended to help the page become usable faster on slower computers.
+
+### Deferred JavaScript
+
+Updated the script tag in `index.html` to use `defer`.
+
+This allows the browser to continue building the page while the JavaScript file loads.
+
+### Player Image Loading
+
+Added lazy loading and asynchronous decoding to both player-photo elements.
+
+These allow player images to load and decode without unnecessarily blocking the rest of the page.
+
+## Files Updated
+
+- `index.html`
+- `style.css`
+- `script.js`
+- `DEVLOG.md`
+
+## New Image Files
+
+- `images/glowing-green-goat.png`
+- `images/glowing-red-basketball.png`
+
+## Git Update
+
+Committed and pushed the Day 8 changes to GitHub with the commit message:
+
+`Add comparison summary and improve page loading`
+
+## Day 8 Result
+
+The GOAT Case Builder now functions much more clearly as a true player comparison website.
+
+Users can:
+
+- Select two different players
+- Compare major awards
+- Compare standardized career résumé categories
+- Understand every result through a visual marker system
+- Lock award cards open to review details
+- View a compact overall comparison summary
+- Still read the unique accomplishments and GOAT arguments that cannot be reduced to simple numerical comparisons

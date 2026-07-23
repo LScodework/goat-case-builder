@@ -1506,3 +1506,11 @@ header p{
         0 0 12px rgba(245, 215, 110, 0.4);
 }
 
+.comparison-key-note {
+    margin: 2px auto 0;
+    max-width: 620px;
+    color: #9ca3af;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    text-align: center;
+}
