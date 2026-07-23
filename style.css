@@ -346,7 +346,7 @@ header p{
 
 @media (hover: hover) and (pointer: fine){
     .career-accomplishments li:hover{
-        transform: translateX(8px) scale(1.045);
+        transform: scale(1.015);
 
         border-left-width: 6px;
         border-left-color: #f5d76e;
