@@ -1122,9 +1122,33 @@ function setUpPlayerSelector(selectID){
             careerList.innerHTML = "";
             goatList.innerHTML = "";
 
-            selectedPlayer.resume.forEach(function(accomplishment){
+            selectedPlayer.resume.forEach(function(accomplishment, index){
                 const listItem = document.createElement("li");
-                listItem.textContent = accomplishment;
+            
+                const resumeText = document.createElement("span");
+                resumeText.classList.add("resume-text");
+                resumeText.textContent = accomplishment;
+            
+                listItem.appendChild(resumeText);
+            
+                if(index < 6){
+                    const comparisonMarker = document.createElement("span");
+                
+                    comparisonMarker.classList.add(
+                        "comparison-marker",
+                        "resume-comparison-marker"
+                    );
+                
+                    listItem.appendChild(comparisonMarker);
+                } else {
+                    const decorativeStar = document.createElement("span");
+                
+                    decorativeStar.classList.add("resume-decorative-star");
+                    decorativeStar.textContent = "★";
+                
+                    listItem.appendChild(decorativeStar);
+                }
+            
                 careerList.appendChild(listItem);
             });
 
@@ -1139,7 +1163,10 @@ function setUpPlayerSelector(selectID){
         
         updateAvailablePlayers();
         updateAwardComparisons();
+        updateResumeAwardComparison();
+        updateResumeStatComparisons();
         syncCareerResumeRows();
+
     });
 }
 
@@ -1216,6 +1243,260 @@ function setComparisonMarker(markers, result) {
 
         marker.appendChild(markerImage);
     });
+}
+
+function updateResumeAwardComparison() {
+    const playerOneSelect = document.getElementById("player-one-select");
+    const playerTwoSelect = document.getElementById("player-two-select");
+
+    const playerOne = players[playerOneSelect.value];
+    const playerTwo = players[playerTwoSelect.value];
+
+    const careerLists = document.querySelectorAll(".career-accomplishments");
+
+    if (careerLists.length !== 2) {
+        return;
+    }
+
+    const playerOneMarker = careerLists[0].querySelector(
+        "li:first-child .resume-comparison-marker"
+    );
+
+    const playerTwoMarker = careerLists[1].querySelector(
+        "li:first-child .resume-comparison-marker"
+    );
+
+    if (!playerOneMarker || !playerTwoMarker) {
+        return;
+    }
+
+    playerOneMarker.innerHTML = "";
+    playerTwoMarker.innerHTML = "";
+
+    playerOneMarker.classList.remove("tie-marker");
+    playerTwoMarker.classList.remove("tie-marker");
+
+    if (!playerOne || !playerTwo) {
+        return;
+    }
+
+    const playerOneAwards = playerOne.awards.match(/\d+/g).map(Number);
+    const playerTwoAwards = playerTwo.awards.match(/\d+/g).map(Number);
+
+    let playerOneWins = 0;
+    let playerTwoWins = 0;
+
+    for (let index = 0; index < 3; index++) {
+        if (playerOneAwards[index] > playerTwoAwards[index]) {
+            playerOneWins++;
+        } else if (playerTwoAwards[index] > playerOneAwards[index]) {
+            playerTwoWins++;
+        }
+    }
+
+    if (playerOneWins > playerTwoWins) {
+        setComparisonMarker([playerOneMarker], "goat");
+        setComparisonMarker([playerTwoMarker], "basketball");
+    } else if (playerTwoWins > playerOneWins) {
+        setComparisonMarker([playerOneMarker], "basketball");
+        setComparisonMarker([playerTwoMarker], "goat");
+    } else {
+        setComparisonMarker([playerOneMarker], "tie");
+        setComparisonMarker([playerTwoMarker], "tie");
+    }
+}
+
+function updateResumeStatComparisons() {
+    const playerOneSelect = document.getElementById("player-one-select");
+    const playerTwoSelect = document.getElementById("player-two-select");
+
+    const playerOne = players[playerOneSelect.value];
+    const playerTwo = players[playerTwoSelect.value];
+
+    const careerLists = document.querySelectorAll(".career-accomplishments");
+
+    if (careerLists.length !== 2 || !playerOne || !playerTwo) {
+        return;
+    }
+
+    const playerOneRows = careerLists[0].querySelectorAll("li");
+    const playerTwoRows = careerLists[1].querySelectorAll("li");
+
+    compareResumeRow(
+        playerOneRows[1],
+        playerTwoRows[1],
+        getCareerPoints(playerOne.resume[1]),
+        getCareerPoints(playerTwo.resume[1])
+    );
+
+    compareResumeRowByCategoryWins(
+        playerOneRows[2],
+        playerTwoRows[2],
+        getCareerAverages(playerOne.resume[2]),
+        getCareerAverages(playerTwo.resume[2])
+    );
+
+    compareResumeRowByCategoryWins(
+        playerOneRows[3],
+        playerTwoRows[3],
+        getSelectionTotals(playerOne.resume[3]),
+        getSelectionTotals(playerTwo.resume[3])
+    );
+
+    compareResumeRow(
+        playerOneRows[4],
+        playerTwoRows[4],
+        getLeagueLeaderTotal(playerOne.resume[4]),
+        getLeagueLeaderTotal(playerTwo.resume[4])
+    );
+
+    compareResumeRowByCategoryWins(
+        playerOneRows[5],
+        playerTwoRows[5],
+        getDefensiveTotals(playerOne.resume[5]),
+        getDefensiveTotals(playerTwo.resume[5])
+    );
+}
+
+function compareResumeRow(playerOneRow, playerTwoRow, playerOneValue, playerTwoValue) {
+    const playerOneMarker = playerOneRow.querySelector(
+        ".resume-comparison-marker"
+    );
+
+    const playerTwoMarker = playerTwoRow.querySelector(
+        ".resume-comparison-marker"
+    );
+
+    if (playerOneValue > playerTwoValue) {
+        setComparisonMarker([playerOneMarker], "goat");
+        setComparisonMarker([playerTwoMarker], "basketball");
+    } else if (playerTwoValue > playerOneValue) {
+        setComparisonMarker([playerOneMarker], "basketball");
+        setComparisonMarker([playerTwoMarker], "goat");
+    } else {
+        setComparisonMarker([playerOneMarker], "tie");
+        setComparisonMarker([playerTwoMarker], "tie");
+    }
+}
+
+function compareResumeRowByCategoryWins(
+    playerOneRow,
+    playerTwoRow,
+    playerOneValues,
+    playerTwoValues
+) {
+    let playerOneWins = 0;
+    let playerTwoWins = 0;
+
+    for (let index = 0; index < playerOneValues.length; index++) {
+        if (playerOneValues[index] > playerTwoValues[index]) {
+            playerOneWins++;
+        } else if (playerTwoValues[index] > playerOneValues[index]) {
+            playerTwoWins++;
+        }
+    }
+
+    compareResumeRow(
+        playerOneRow,
+        playerTwoRow,
+        playerOneWins,
+        playerTwoWins
+    );
+}
+
+function getCareerPoints(text) {
+    const match = text.match(/([\d,]+)\s+regular-season points/i);
+
+    if (match) {
+        return Number(match[1].replaceAll(",", ""));
+    }
+
+    const rankMatch = text.match(/ranked\s+(\w+)/i);
+
+    const writtenRanks = {
+        first: 1,
+        second: 2,
+        third: 3,
+        fourth: 4,
+        fifth: 5
+    };
+
+    if (rankMatch) {
+        const rank = writtenRanks[rankMatch[1].toLowerCase()];
+
+        return rank ? 100000 - rank : 0;
+    }
+
+    return 0;
+}
+
+function getCareerAverages(text) {
+    const numbers = text.match(/\d+\.\d+/g);
+
+    return numbers ? numbers.slice(0, 3).map(Number) : [0, 0, 0];
+}
+
+function getSelectionTotals(text) {
+    const numbers = text.match(/\d+/g);
+
+    return numbers ? numbers.slice(0, 3).map(Number) : [0, 0, 0];
+}
+
+function getLeagueLeaderTotal(text) {
+    const titleCounts = text.match(/\d+×/g);
+
+    if (!titleCounts) {
+        return 0;
+    }
+
+    return titleCounts.reduce(function(total, count) {
+        return total + Number(count.replace("×", ""));
+    }, 0);
+}
+
+function getDefensiveTotals(text) {
+    let allDefensive = 0;
+    let firstTeam = 0;
+    let defensivePlayerOfYear = 0;
+
+    const allDefensiveMatch = text.match(
+        /(\d+)× All-Defensive selection/i
+    );
+
+    const firstTeamMatch = text.match(
+        /(\d+) First Team selection/i
+    );
+
+    const firstTeamOnlyMatch = text.match(
+        /(\d+)× All-Defensive First Team/i
+    );
+
+    const defensivePlayerMatch = text.match(
+        /(\d+)× Defensive Player of the Year/i
+    );
+
+    if (allDefensiveMatch) {
+        allDefensive = Number(allDefensiveMatch[1]);
+    }
+
+    if (firstTeamMatch) {
+        firstTeam = Number(firstTeamMatch[1]);
+    }
+
+    if (firstTeamOnlyMatch) {
+        allDefensive = Number(firstTeamOnlyMatch[1]);
+        firstTeam = Number(firstTeamOnlyMatch[1]);
+    }
+
+    if (defensivePlayerMatch) {
+        defensivePlayerOfYear = Number(defensivePlayerMatch[1]);
+    }
+
+    return [
+        allDefensive,
+        firstTeam,
+        defensivePlayerOfYear
+    ];
 }
 
 function updateAvailablePlayers() {

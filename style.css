@@ -297,6 +297,7 @@ header p{
 }
 
 .career-accomplishments li{
+    position: relative;
     display: flex;
     gap: 10px;
 
@@ -335,6 +336,7 @@ header p{
 }
 
 .career-accomplishments li{
+    position: relative;
     transition:
         transform 0.2s ease,
         border-color 0.2s ease,
@@ -378,6 +380,46 @@ header p{
     .career-accomplishments li:active{
         transform: none;
     }
+}
+
+.resume-text {
+    flex: 1;
+    min-width: 0;
+    padding-right: 34px;
+}
+
+.career-accomplishments li .comparison-marker.resume-comparison-marker {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+
+    width: 32px;
+    height: 32px;
+
+    transform: translateY(-50%);
+}
+
+.resume-decorative-star {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f5d76e;
+    font-size: 17px;
+    line-height: 1;
+
+    transform: translateY(-50%);
+
+    text-shadow: 0 0 8px rgba(245, 215, 110, 0.35);
+
+    pointer-events: none;
 }
 
 .goat-case h3{
