@@ -1138,9 +1138,86 @@ function setUpPlayerSelector(selectID){
         }
         
         updateAvailablePlayers();
+        updateAwardComparisons();
         syncCareerResumeRows();
     });
 }
+
+function updateAwardComparisons() {
+    const playerPanels = document.querySelectorAll(".player-panel");
+
+    if (playerPanels.length !== 2) {
+        return;
+    }
+
+    const playerOneSelect = document.getElementById("player-one-select");
+    const playerTwoSelect = document.getElementById("player-two-select");
+
+    const playerOne = players[playerOneSelect.value];
+    const playerTwo = players[playerTwoSelect.value];
+
+    const allMarkers = document.querySelectorAll(".comparison-marker");
+
+    allMarkers.forEach((marker) => {
+        marker.innerHTML = "";
+        marker.classList.remove("tie-marker");
+    });
+
+    if (!playerOne || !playerTwo) {
+        return;
+    }
+
+    const playerOneCards = playerPanels[0].querySelectorAll(".flip-card");
+    const playerTwoCards = playerPanels[1].querySelectorAll(".flip-card");
+
+    const playerOneValues = playerOne.awards.match(/\d+/g).map(Number);
+    const playerTwoValues = playerTwo.awards.match(/\d+/g).map(Number);
+
+    for (let index = 0; index < 3; index++) {
+        const playerOneMarkers =
+            playerOneCards[index].querySelectorAll(".comparison-marker");
+
+        const playerTwoMarkers =
+            playerTwoCards[index].querySelectorAll(".comparison-marker");
+
+        if (playerOneValues[index] > playerTwoValues[index]) {
+            setComparisonMarker(playerOneMarkers, "goat");
+            setComparisonMarker(playerTwoMarkers, "basketball");
+        } else if (playerOneValues[index] < playerTwoValues[index]) {
+            setComparisonMarker(playerOneMarkers, "basketball");
+            setComparisonMarker(playerTwoMarkers, "goat");
+        } else {
+            setComparisonMarker(playerOneMarkers, "tie");
+            setComparisonMarker(playerTwoMarkers, "tie");
+        }
+    }
+}
+
+function setComparisonMarker(markers, result) {
+    markers.forEach((marker) => {
+        marker.innerHTML = "";
+        marker.classList.remove("tie-marker");
+
+        if (result === "tie") {
+            marker.textContent = "=";
+            marker.classList.add("tie-marker");
+            return;
+        }
+
+        const markerImage = document.createElement("img");
+
+        if (result === "goat") {
+            markerImage.src = "images/glowing-green-goat.png";
+            markerImage.alt = "Category leader";
+        } else {
+            markerImage.src = "images/glowing-red-basketball.png";
+            markerImage.alt = "Lower category total";
+        }
+
+        marker.appendChild(markerImage);
+    });
+}
+
 function updateAvailablePlayers() {
     const playerOneSelect = document.getElementById("player-one-select");
     const playerTwoSelect = document.getElementById("player-two-select");
@@ -1255,15 +1332,23 @@ document.addEventListener("click", (event) => {
 document.addEventListener("click", (event) => {
     const clickedAwardCard = event.target.closest(".flip-card");
 
-    document.querySelectorAll(".flip-card.is-flipped").forEach((card) => {
-        if (card !== clickedAwardCard) {
-            card.classList.remove("is-flipped");
-        }
-    });
-
-    if (clickedAwardCard) {
-        clickedAwardCard.classList.toggle("is-flipped");
+    if (!clickedAwardCard) {
+        return;
     }
+
+    if (clickedAwardCard.classList.contains("is-flipped")) {
+        clickedAwardCard.classList.remove("is-flipped");
+        clickedAwardCard.classList.add("ignore-hover");
+    } else {
+        clickedAwardCard.classList.add("is-flipped");
+        clickedAwardCard.classList.remove("ignore-hover");
+    }
+});
+
+document.querySelectorAll(".flip-card").forEach((card) => {
+    card.addEventListener("mouseleave", () => {
+        card.classList.remove("ignore-hover");
+    });
 });
 
 

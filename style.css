@@ -934,6 +934,9 @@ header p{
     height: 81px;
     padding: 0;
     perspective: 900px;
+
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 .flip-card .award-card-inner {
@@ -959,6 +962,8 @@ header p{
 
     background: linear-gradient(145deg, #303030, #202020);
 
+    border-radius: inherit;
+
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
@@ -968,7 +973,7 @@ header p{
     padding: 5px 6px;
 }
 
-.flip-card:hover .award-card-inner,
+.flip-card:not(.ignore-hover):hover .award-card-inner,
 .flip-card.is-flipped .award-card-inner {
     transform: rotateY(180deg);
 }
@@ -1077,5 +1082,38 @@ header p{
     font-weight: 600;
     line-height: 1.1;
     text-align: center;
+}
+
+.comparison-marker {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 3;
+    pointer-events: none;
+}
+
+.comparison-marker img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+.comparison-marker.tie-marker {
+    color: #f4c542;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow:
+        0 0 4px rgba(244, 197, 66, 0.9),
+        0 0 8px rgba(244, 197, 66, 0.55);
 }
 
