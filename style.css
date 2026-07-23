@@ -1159,3 +1159,350 @@ header p{
         0 0 8px rgba(244, 197, 66, 0.55);
 }
 
+.comparison-summary-controls {
+    display: none;
+    justify-content: center;
+    padding: 28px 16px 40px;
+}
+
+.comparison-summary-controls.is-visible {
+    display: flex;
+}
+
+.comparison-summary-button {
+    padding: 12px 24px;
+
+    color: #f5d76e;
+    font-family: "Teko", sans-serif;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(48, 48, 48, 0.98),
+            rgba(25, 25, 25, 0.98)
+        );
+
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.35),
+        0 0 12px rgba(212, 175, 55, 0.18);
+
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.comparison-summary-button:hover {
+    transform: translateY(-2px);
+    border-color: #f5d76e;
+
+    box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.45),
+        0 0 18px rgba(245, 215, 110, 0.28);
+}
+
+.comparison-summary-modal {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(5px);
+
+    z-index: 1000;
+}
+
+.comparison-summary-modal.is-open {
+    display: flex;
+}
+
+.comparison-summary-card {
+    position: relative;
+
+    width: min(760px, 92vw);
+    max-height: 88vh;
+    overflow-y: auto;
+
+    padding: 26px 28px 30px;
+
+    color: #eeeeee;
+
+    background:
+        linear-gradient(
+            145deg,
+            #242424,
+            #151515
+        );
+
+    border: 2px solid #d4af37;
+    border-radius: 14px;
+
+    box-shadow:
+        0 24px 55px rgba(0, 0, 0, 0.7),
+        0 0 26px rgba(212, 175, 55, 0.2);
+}
+
+.comparison-summary-card > h2 {
+    margin: 0 0 24px;
+
+    color: #f5d76e;
+    font-family: "Teko", sans-serif;
+    font-size: 34px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.comparison-summary-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+
+    padding: 0;
+
+    color: #f5d76e;
+    font-size: 34px;
+    line-height: 1;
+
+    background: transparent;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.comparison-summary-grid {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Horizontal top of the T */
+.comparison-summary-grid::before {
+    content: "";
+
+    position: absolute;
+    top: 92px;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37 8%,
+            #f5d76e 50%,
+            #d4af37 92%,
+            transparent
+        );
+
+    box-shadow: 0 0 8px rgba(245, 215, 110, 0.35);
+}
+
+/* Vertical stem of the T */
+.comparison-summary-grid::after {
+    content: "";
+
+    position: absolute;
+    top: 92px;
+    bottom: 0;
+    left: 50%;
+
+    width: 3px;
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            180deg,
+            #f5d76e,
+            #d4af37 75%,
+            transparent
+        );
+
+    box-shadow: 0 0 8px rgba(245, 215, 110, 0.3);
+}
+
+.summary-player {
+    min-width: 0;
+    padding: 0 24px;
+}
+
+.summary-player-header {
+    height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    padding: 0 12px 14px;
+    text-align: center;
+}
+
+.summary-player-photo {
+    width: 62px;
+    height: 76px;
+    flex-shrink: 0;
+
+    object-fit: cover;
+    object-position: top center;
+
+    background: #181818;
+
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.45),
+        0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.summary-player-header h3 {
+    max-width: 160px;
+    margin: 0;
+
+    white-space: pre-line;
+    text-align: center;
+    white-space: pre-line;
+    text-align: center;
+
+    color: #ffffff;
+    font-family: "Teko", sans-serif;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.summary-results {
+    display: grid;
+    gap: 14px;
+
+    padding-top: 24px;
+}
+
+.summary-results p {
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 0;
+
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.summary-results img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.summary-equals {
+    width: 38px;
+
+    color: #f5d76e;
+    font-size: 38px;
+    line-height: 1;
+    text-align: center;
+
+    text-shadow:
+        0 0 6px rgba(245, 215, 110, 0.8),
+        0 0 12px rgba(245, 215, 110, 0.4);
+}
+
+@media (max-width: 650px) {
+    .comparison-summary-card {
+        padding: 24px 16px 26px;
+    }
+
+    .summary-player {
+        padding: 0 12px;
+    }
+
+    .summary-player-header {
+        height: 84px;
+        gap: 8px;
+    }
+
+    .summary-player-photo {
+        width: 50px;
+        height: 64px;
+    }
+
+    .summary-player-header h3 {
+        font-size: 23px;
+    }
+
+    .comparison-summary-grid::before,
+    .comparison-summary-grid::after {
+        top: 84px;
+    }
+
+    .summary-results p {
+        font-size: 19px;
+    }
+
+    .summary-results img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.comparison-key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 1px;
+    font-size: 0.78rem;
+    color: #9ca3af;
+}
+
+.comparison-key-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.comparison-key-item img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.comparison-key-tie span {
+    width: 20px;
+    height: 20px;
+    font-size: 1.05rem;
+}
+
+.comparison-key .comparison-key-tie span {
+    color: #f5d76e;
+}
+
+.comparison-marker.tie-marker,
+.comparison-key .comparison-key-tie span {
+    color: #f5d76e;
+    font-weight: 700;
+    text-shadow:
+        0 0 6px rgba(245, 215, 110, 0.75),
+        0 0 12px rgba(245, 215, 110, 0.4);
+}
+

@@ -20,6 +20,29 @@
             <p class="interaction-hint">
                 Tap or hover over photos, team logos, and award cards for more details.
             </p>
+
+            <div class="comparison-key">
+                <span class="comparison-key-item">
+                    <img
+                        src="images/glowing-green-goat.png"
+                        alt=""
+                    >
+                    Category leader
+                </span>
+            
+                <span class="comparison-key-item">
+                    <img
+                        src="images/glowing-red-basketball.png"
+                        alt=""
+                    >
+                    Lower total
+                </span>
+            
+                <span class="comparison-key-item comparison-key-tie">
+                    <span>=</span>
+                    Tie
+                </span>
+            </div>
             
         </header>
         <main class="comparison-container">
@@ -52,7 +75,9 @@
                     <div class="player-overview">
                         <!-- Places the action photo beside the four summary lines. -->
             
-                        <img class="player-photo" src="" alt="">
+                        <img class="player-photo" src="" alt=""
+                        loading="lazy"
+                        decoding="async" >
             
                         <div class="player-summary">
                             <h3>Player Name</h3>
@@ -163,7 +188,9 @@
                     <div class="player-overview">
                         <!-- Places the action photo beside the four summary lines. -->
                 
-                        <img class="player-photo" src="" alt="">
+                        <img class="player-photo" src="" alt=""
+                        loading="lazy"
+                        decoding="async" >
                 
                         <div class="player-summary">
                             <h3>Player Name</h3>
@@ -247,6 +274,104 @@
                 </div>
             </section>
         </main>
+
+        <div class="comparison-summary-controls">
+            <button
+                class="comparison-summary-button"
+                id="comparison-summary-button"
+                type="button"
+            >
+                View Comparison Summary
+            </button>
+        </div>
+        
+        <div class="comparison-summary-modal" id="comparison-summary-modal">
+            <div class="comparison-summary-card">
+                <button
+                    class="comparison-summary-close"
+                    id="comparison-summary-close"
+                    type="button"
+                >
+                    &times;
+                </button>
+        
+                <h2>Comparison Summary</h2>
+        
+                <div class="comparison-summary-grid">
+                    <section class="summary-player summary-player-one">
+                        <div class="summary-player-header">
+                            <img
+                                class="summary-player-photo"
+                                id="summary-player-one-photo"
+                                src=""
+                                alt=""
+                            >
+        
+                            <h3 id="summary-player-one-name">Player One</h3>
+                        </div>
+        
+                        <div class="summary-results">
+                            <p>
+                                <img
+                                    src="images/glowing-green-goat.png"
+                                    alt="Category wins"
+                                >
+                                <span id="summary-player-one-goats">× 0</span>
+                            </p>
+        
+                            <p>
+                                <img
+                                    src="images/glowing-red-basketball.png"
+                                    alt="Category losses"
+                                >
+                                <span id="summary-player-one-basketballs">× 0</span>
+                            </p>
+        
+                            <p class="summary-tie-total">
+                                <span class="summary-equals">=</span>
+                                <span id="summary-player-one-ties">× 0</span>
+                            </p>
+                        </div>
+                    </section>
+        
+                    <section class="summary-player summary-player-two">
+                        <div class="summary-player-header">
+                            <img
+                                class="summary-player-photo"
+                                id="summary-player-two-photo"
+                                src=""
+                                alt=""
+                            >
+        
+                            <h3 id="summary-player-two-name">Player Two</h3>
+                        </div>
+        
+                        <div class="summary-results">
+                            <p>
+                                <img
+                                    src="images/glowing-green-goat.png"
+                                    alt="Category wins"
+                                >
+                                <span id="summary-player-two-goats">× 0</span>
+                            </p>
+        
+                            <p>
+                                <img
+                                    src="images/glowing-red-basketball.png"
+                                    alt="Category losses"
+                                >
+                                <span id="summary-player-two-basketballs">× 0</span>
+                            </p>
+        
+                            <p class="summary-tie-total">
+                                <span class="summary-equals">=</span>
+                                <span id="summary-player-two-ties">× 0</span>
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
         
         <div class="image-modal" id="image-modal">
             <div class="image-modal-card">
@@ -265,6 +390,6 @@
             </div>
         </div>
 
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </body>
 </html>

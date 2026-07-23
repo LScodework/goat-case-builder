@@ -1165,6 +1165,7 @@ function setUpPlayerSelector(selectID){
         updateAwardComparisons();
         updateResumeAwardComparison();
         updateResumeStatComparisons();
+        updateComparisonSummaryButton();
         syncCareerResumeRows();
 
     });
@@ -1355,6 +1356,26 @@ function updateResumeStatComparisons() {
         playerTwoRows[5],
         getDefensiveTotals(playerOne.resume[5]),
         getDefensiveTotals(playerTwo.resume[5])
+    );
+}
+
+function updateComparisonSummaryButton() {
+    const playerOneSelect =
+        document.getElementById("player-one-select");
+
+    const playerTwoSelect =
+        document.getElementById("player-two-select");
+
+    const summaryControls =
+        document.querySelector(".comparison-summary-controls");
+
+    const bothPlayersSelected =
+        players[playerOneSelect.value] &&
+        players[playerTwoSelect.value];
+
+    summaryControls.classList.toggle(
+        "is-visible",
+        Boolean(bothPlayersSelected)
     );
 }
 
@@ -1630,6 +1651,161 @@ document.querySelectorAll(".flip-card").forEach((card) => {
     card.addEventListener("mouseleave", () => {
         card.classList.remove("ignore-hover");
     });
+});
+
+const comparisonSummaryButton =
+    document.getElementById("comparison-summary-button");
+
+const comparisonSummaryModal =
+    document.getElementById("comparison-summary-modal");
+
+const comparisonSummaryClose =
+    document.getElementById("comparison-summary-close");
+
+function getSummaryName(fullName) {
+    const nameParts = fullName.trim().split(/\s+/);
+
+    if (nameParts.length === 1) {
+        return fullName;
+    }
+
+    return `${nameParts[0]}\n${nameParts[nameParts.length - 1]}`;
+}
+
+function updateComparisonSummaryTotals() {
+    const playerPanels =
+        document.querySelectorAll(".player-panel");
+
+    if (playerPanels.length !== 2) {
+        return;
+    }
+
+    function countPanelResults(playerPanel) {
+        let goats = 0;
+        let basketballs = 0;
+        let ties = 0;
+
+        const comparisonMarkers =
+            playerPanel.querySelectorAll(".comparison-marker");
+
+        comparisonMarkers.forEach((marker) => {
+            if (marker.classList.contains("tie-marker")) {
+                ties++;
+                return;
+            }
+
+            const markerImage = marker.querySelector("img");
+
+            if (!markerImage) {
+                return;
+            }
+
+            const imageSource =
+                markerImage.getAttribute("src") || "";
+
+            if (imageSource.includes("glowing-green-goat")) {
+                goats++;
+            } else if (
+                imageSource.includes("glowing-red-basketball")
+            ) {
+                basketballs++;
+            }
+        });
+
+        return {
+            goats,
+            basketballs,
+            ties
+        };
+    }
+
+    const playerOneTotals =
+        countPanelResults(playerPanels[0]);
+
+    const playerTwoTotals =
+        countPanelResults(playerPanels[1]);
+
+    document.getElementById(
+        "summary-player-one-goats"
+    ).textContent = `× ${playerOneTotals.goats}`;
+
+    document.getElementById(
+        "summary-player-one-basketballs"
+    ).textContent = `× ${playerOneTotals.basketballs}`;
+
+    document.getElementById(
+        "summary-player-one-ties"
+    ).textContent = `× ${playerOneTotals.ties}`;
+
+    document.getElementById(
+        "summary-player-two-goats"
+    ).textContent = `× ${playerTwoTotals.goats}`;
+
+    document.getElementById(
+        "summary-player-two-basketballs"
+    ).textContent = `× ${playerTwoTotals.basketballs}`;
+
+    document.getElementById(
+        "summary-player-two-ties"
+    ).textContent = `× ${playerTwoTotals.ties}`;
+}
+
+function openComparisonSummary() {
+    const playerOneSelect =
+        document.getElementById("player-one-select");
+
+    const playerTwoSelect =
+        document.getElementById("player-two-select");
+
+    const playerOne = players[playerOneSelect.value];
+    const playerTwo = players[playerTwoSelect.value];
+
+    if (!playerOne || !playerTwo) {
+        return;
+    }
+
+    document.getElementById(
+        "summary-player-one-name"
+    ).textContent = getSummaryName(playerOne.name);
+    
+    document.getElementById(
+        "summary-player-two-name"
+    ).textContent = getSummaryName(playerTwo.name);
+
+    const playerOnePhoto =
+        document.getElementById("summary-player-one-photo");
+
+    const playerTwoPhoto =
+        document.getElementById("summary-player-two-photo");
+
+    playerOnePhoto.src = playerOne.image;
+    playerOnePhoto.alt = playerOne.name;
+
+    playerTwoPhoto.src = playerTwo.image;
+    playerTwoPhoto.alt = playerTwo.name;
+
+    updateComparisonSummaryTotals();
+    comparisonSummaryModal.classList.add("is-open");
+}
+
+function closeComparisonSummary() {
+    comparisonSummaryModal.classList.remove("is-open");
+}
+
+comparisonSummaryButton.addEventListener(
+    "click",
+    openComparisonSummary
+);
+
+comparisonSummaryClose.addEventListener(
+    "click",
+    closeComparisonSummary
+);
+
+comparisonSummaryModal.addEventListener("click", (event) => {
+    if (event.target === comparisonSummaryModal) {
+        closeComparisonSummary();
+    }
 });
 
 
