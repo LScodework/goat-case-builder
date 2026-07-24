@@ -935,3 +935,59 @@ Users can:
 - Lock award cards open to review details
 - View a compact overall comparison summary
 - Still read the unique accomplishments and GOAT arguments that cannot be reduced to simple numerical comparisons
+
+## Day 9 – Responsive Mobile and Tablet Layout
+
+Today I made the GOAT Case Builder responsive across phones, tablets, and smaller desktop screens.
+
+### What I changed
+
+- Installed and configured Live Server in Cursor IDE.
+- Used Chrome DevTools Device Mode to test the project at multiple screen sizes.
+- Removed an extra closing `</div>` from `index.html`.
+- Added responsive CSS media queries.
+- Changed the player comparison panels to stack vertically on narrower screens.
+- Preserved the side-by-side comparison layout on wider screens.
+- Adjusted the main responsive breakpoint after testing phones, tablets, and landscape orientations.
+- Made the header scale properly on mobile.
+- Removed the large dark gap around the mobile header.
+- Fixed the header tagline overlapping the title image.
+- Reworked the player overview layout so the image appears above the bio on stacked screens.
+- Expanded the bio, team, and era section to use the available mobile width.
+- Expanded the award row to better align with the Career Résumé and GOAT Case sections.
+- Resized award labels and comparison markers for smaller screens.
+- Added special styling for the longer “Championships” label.
+- Fixed comparison markers overlapping award-card text.
+- Added additional small-screen styling for devices around 390px wide.
+- Added medium-width styling for award cards on devices such as the Surface Pro and iPad Pro.
+- Tested the layout using multiple simulated devices and viewport widths.
+- Verified that player images, bios, award cards, flip-card backs, résumés, GOAT arguments, modals, and comparison summaries still work correctly.
+- Committed and pushed the completed responsive update to GitHub.
+
+### Responsive behavior
+
+- Phones and narrower tablet layouts display the two player panels vertically.
+- Wider tablets, landscape layouts, and desktop screens display the panels side by side.
+- Small-screen award cards use reduced spacing, label sizes, and marker sizes.
+- Medium-width screens use adjusted award-card typography to prevent overlap.
+- The site now avoids horizontal scrolling and cramped desktop layouts on mobile devices.
+
+### Tools and concepts practiced
+
+- CSS media queries
+- Responsive breakpoints
+- Flexbox direction changes
+- Responsive widths and spacing
+- Mobile and tablet testing
+- Chrome DevTools Device Mode
+- Live Server
+- Local browser testing before deployment
+- Git commit and push workflow
+
+### Git commit
+
+Add responsive mobile and tablet layouts
+
+### Current project status
+
+The GOAT Case Builder now works across desktop, tablet, and mobile screen sizes. The core comparison experience, interactive award cards, player modals, résumé sections, GOAT arguments, and comparison summary remain functional across the tested layouts.
