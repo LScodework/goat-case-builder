@@ -1514,3 +1514,198 @@ header p{
     line-height: 1.35;
     text-align: center;
 }
+
+/* ============================================
+   Mobile Layout (Phones)
+============================================ */
+
+@media (max-width: 1100px) {
+
+    .comparison-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .player-panel {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    header {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 18px;
+        border-radius: 0;
+    }
+    
+    .site-title-image {
+        width: 100%;
+        margin-top: -20px;
+        margin-bottom: 4px;
+    }
+    
+    header p {
+        margin-top: 0;
+        font-size: 0.9rem;
+        line-height: 1.25;
+    }
+
+    .player-overview {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    
+    .player-photo {
+        width: 100%;
+        max-width: 260px;
+    }
+    
+    .player-info {
+        width: 100%;
+    }
+    
+    .player-info h3 {
+        text-align: center;
+    }
+
+    .awards {
+        gap: 0.75rem;
+    }
+    
+    .award-card {
+        min-width: 0;
+    }
+    
+    .award-card-front h4 {
+        font-size: 0.95rem;
+        line-height: 1.05;
+        padding: 0 0.2rem;
+    }
+    
+    .player-summary {
+        width: 100%;
+    }
+    
+    .player-summary h3 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .bio-details {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .awards-grid {
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .flip-card {
+        height: 88px;
+    }
+    
+    .flip-card .award-card-front {
+        padding: 10px 4px;
+    }
+    
+    .flip-card .award-label {
+        font-size: 0.9rem;
+    }
+
+    .flip-card[data-award="championships"] .comparison-marker {
+        right: 1px;
+        width: 13px;
+        height: 13px;
+    }
+    
+    .comparison-marker {
+        top: 4px;
+        right: 4px;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .comparison-marker.tie-marker {
+        font-size: 17px;
+    }
+
+    .flip-card .award-label {
+        padding: 0;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .flip-card[data-award="championships"] .award-label {
+        font-size: 0.78rem;
+        letter-spacing: 0;
+    }
+    
+    .comparison-marker {
+        top: 4px;
+        right: 3px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .comparison-marker.tie-marker {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 390px) {
+    .awards-grid {
+        gap: 6px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .flip-card {
+        min-width: 0;
+    }
+
+    .flip-card .award-label {
+        font-size: 0.82rem;
+    }
+
+    .flip-card[data-award="championships"] .award-label {
+        font-size: 0.7rem;
+    }
+
+    .comparison-marker {
+        top: 3px;
+        right: 3px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .comparison-marker.tie-marker {
+        font-size: 14px;
+    }
+}
+
+/* Medium desktop / large tablet landscape award-card cleanup */
+@media (min-width: 1101px) and (max-width: 1400px) {
+    .flip-card .award-label {
+        font-size: 0.88rem;
+        padding: 0 16px;
+        text-align: center;
+    }
+
+    .flip-card[data-award="championships"] .award-label {
+        font-size: 0.76rem;
+        letter-spacing: 0;
+    }
+
+    .comparison-marker {
+        top: 4px;
+        right: 3px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .comparison-marker.tie-marker {
+        font-size: 15px;
+    }
+}
